@@ -1,0 +1,1 @@
+Daraz;R.drawable.daraz
