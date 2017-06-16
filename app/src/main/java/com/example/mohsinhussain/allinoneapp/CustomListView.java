@@ -17,22 +17,31 @@ import android.widget.TextView;
 
 public class CustomListView extends ArrayAdapter<String> {
 
-    private String[] brandName ;
-    private Integer[] ImagePath ;
-private Activity context;
-    public CustomListView(Activity context, String[] brandName , Integer[] ImagePath) {
+     String[] brandName;
+     int[] ImagePath;
+     Context mcontext;
+
+    public CustomListView(Activity context, String[] brandName, int[] ImagePath) {
         super(context, R.layout.custom_view);
-        this.brandName=brandName;
-        this.ImagePath=ImagePath;
-        this.context=context;
+        this.brandName = brandName;
+        this.ImagePath = ImagePath;
+        this.mcontext = context;
 
     }
 
+    public int getCount() {
+        return brandName.length;
+    }
+
+
     public View getView(int position, View convertView, ViewGroup parent) {
+
+
         ViewHolder mViewHolder = new ViewHolder();
         if (convertView == null) {
-            LayoutInflater mInflater = (LayoutInflater) context.
+            LayoutInflater mInflater = (LayoutInflater) mcontext.
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
             convertView = mInflater.inflate(R.layout.custom_view, parent, false);
             mViewHolder.mFlag = (ImageView) convertView.findViewById(R.id.imageView);
             mViewHolder.mName = (TextView) convertView.findViewById(R.id.textView);
@@ -45,9 +54,10 @@ private Activity context;
 
         return convertView;
     }
+
     static class ViewHolder {
         ImageView mFlag;
         TextView mName;
     }
-
 }
+

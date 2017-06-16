@@ -19,8 +19,20 @@ public class StoresActivity extends AppCompatActivity {
 
     TextView name[];
     TextView cgpatext[];
-    String[] brandName ;
-    Integer[] ImagePath ;
+    String[] brandName={
+            "DARAZ.PK",
+            "YAYVO.PK"
+
+    };
+    int[] imgId={
+
+            R.drawable.daraz,
+            R.drawable.yayvo
+
+    };
+
+            Scanner scanner;
+
     List list=new ArrayList<String>();
     ArrayAdapter theAdapter;
 
@@ -33,37 +45,44 @@ public class StoresActivity extends AppCompatActivity {
 
         getIntent();
 
-        Scanner scanner;
-        String[] tokens = new String[20];
-        InputStream is = getResources().openRawResource(R.raw.shoppingrecords);
+        //this is for taking the name and image by using file
+//        String[] tokens = new String[20];
+//        InputStream is = getResources().openRawResource(R.raw.shoppingrecords);
 
-        scanner = new Scanner(is);
-        brandName = new String[100];
-        ImagePath = new Integer[100];
+//        scanner = new Scanner(is);
+//        brandName = new String[100];
+//        imgId = new int[100];
+//
+//        int k = 0;
+//        while(scanner.hasNext()){
+//            tokens = scanner.nextLine().split(";");
+//            brandName[k]=tokens[0];
+//
+//
+//            k++;
+//
+//
+//
+//        }
 
-        String[] brandName ={
-                "Uzair"
 
 
-        };
+//        scanner.close();
 
 
 
-        Integer[] imgid={
-                R.drawable.daraz
-
-        };
-
-        int k = 0;
-
-        scanner.close();
-        CustomListView myAdapter = new CustomListView(StoresActivity.this, brandName, ImagePath);
         ListView listView=(ListView)findViewById(R.id.listView);
+
+        CustomListView myAdapter = new CustomListView(StoresActivity.this, brandName, imgId);
         listView.setAdapter(myAdapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent mIntent = new Intent(StoresActivity.this, Webview.class);
+                mIntent.putExtra("brandName", brandName[i]);
+                startActivity(mIntent);
+
 
             }
         });
