@@ -1,1 +1,4 @@
-Daraz;R.drawable.daraz
+DARAZ.PK;R.drawable.daraz;shopping;https://www.daraz.pk
+YAYVO.PK;R.drawable.yayvo;shopping;http://yayvo.com
+keymu.pk;R.drawable.yayvo;shopping;http://yayvo.com
+

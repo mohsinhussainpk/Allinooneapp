@@ -11,28 +11,36 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Hp on 6/15/2017.
  */
 
 public class CustomListView extends ArrayAdapter<String> {
 
-     String[] brandName;
-     int[] ImagePath;
+    ArrayList<String>brand;
+     //String[] brand;
+    Integer[] ImagePath;
      Context mcontext;
 
-    public CustomListView(Activity context, String[] brandName, int[] ImagePath) {
+    public CustomListView(Activity context, ArrayList<String> brand, Integer[] ImagePath) {
         super(context, R.layout.custom_view);
-        this.brandName = brandName;
+        this.brand = brand;
+
         this.ImagePath = ImagePath;
         this.mcontext = context;
 
     }
 
+
+    @Override
     public int getCount() {
-        return brandName.length;
+        // TODO Auto-generated method stub
+        return brand.size();
     }
 
+    @Override
 
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -50,7 +58,7 @@ public class CustomListView extends ArrayAdapter<String> {
             mViewHolder = (ViewHolder) convertView.getTag();
         }
         mViewHolder.mFlag.setImageResource(ImagePath[position]);
-        mViewHolder.mName.setText(brandName[position]);
+        mViewHolder.mName.setText(brand.get(position));
 
         return convertView;
     }
