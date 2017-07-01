@@ -15,18 +15,9 @@ public class Webview extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
         browser = (WebView)findViewById(R.id.webView);
 
-        String brandName=getIntent().getStringExtra("brandName");
-        String url="";
-        if(brandName.equals("DARAZ.PK"))
-        {
 
-             url = "https://www.daraz.pk";
-        }
-        else if(brandName.equals("YAYVO.PK"))
-        {
-             url = "http://yayvo.com";
+        String url=getIntent().getStringExtra("brandUrl");
 
-        }
 
         browser.getSettings().getJavaScriptEnabled();
         browser.loadUrl(url);

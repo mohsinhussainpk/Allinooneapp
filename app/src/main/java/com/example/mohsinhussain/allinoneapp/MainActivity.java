@@ -1,6 +1,7 @@
 package com.example.mohsinhussain.allinoneapp;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,10 +14,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static final String CATEGORY = "category";
+    TextView textviewShoppiing ;
+    TextView textviewFood ;
+     int click = 0;
+    public static String category = "";
+    static DAL layer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +38,7 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
@@ -36,16 +46,15 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
-//         DAL layer=new DAL(this,this);
-//        layer.addProfile();
-//        layer.searchProfile();
-        //layer.getBrandName();
+          layer=new DAL(this,this);
+        //layer.addProfile();
+ //       layer.searchProfile();
+//        layer.retrieve();
+//        //layer.getBrandName();
+//        layer.printData();
+//layer.searchProfile();
+
         //layer.printData();
-
-
-        //layer.printData();
-
-
 
 
 
@@ -111,7 +120,33 @@ public class MainActivity extends AppCompatActivity
 
     public void moveToBrandsList(View view) {
 
-        Intent intent=new Intent(this,StoresActivity.class);
+        TextView textviewShoppiing = (TextView) findViewById(R.id.textviewShopping);
+        TextView textviewFood = (TextView) findViewById(R.id.textviewFood);
+
+
+        switch (view.getId()) {
+
+
+            case R.id.shoppingImage:
+                category = textviewShoppiing.getText().toString();
+                break;
+
+            case R.id.foodImage:
+                category = textviewFood.getText().toString();
+                break;
+
+
+        }
+
+             Intent intent=new Intent(this,StoresActivity.class);
+        intent.putExtra(CATEGORY,category);
+
+layer.searchProfile(category);
         startActivity(intent);
+
     }
+
+
+
+
 }

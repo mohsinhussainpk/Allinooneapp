@@ -26,8 +26,8 @@ public class StoresActivity extends AppCompatActivity {
 
     Integer[] imgId = {
 
-            R.drawable.daraz,
-            R.drawable.yayvo
+//            R.drawable.daraz,
+//            R.drawable.yayvo
 
     };
 
@@ -46,7 +46,7 @@ public class StoresActivity extends AppCompatActivity {
 
     Scanner scanner;
 
-    List list = new ArrayList<String>();
+
     ArrayAdapter theAdapter;
 
 
@@ -55,9 +55,18 @@ public class StoresActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stores);
 
-        getIntent();
-        final DAL layer1 = new DAL(this, this);
 
+        DAL layer=new DAL();
+
+        String category=getIntent().getStringExtra(MainActivity.CATEGORY);
+//layer.searchProfile();
+
+
+
+
+
+
+        //  Toast.makeText(this,category,Toast.LENGTH_SHORT).show();
         //layer1 = new DAL(this, this);
         //layer1.searchProfile();
 
@@ -89,14 +98,14 @@ public class StoresActivity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.listView);
 
-        CustomListView myAdapter = new CustomListView(this, layer1.getBrandName(), imgId);
+        CustomListView myAdapter = new CustomListView(this, DAL.getBrandName, imgId);
 
-notifyAdapter(myAdapter,listView);
+        listView.setAdapter(myAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent mIntent = new Intent(StoresActivity.this, Webview.class);
-                mIntent.putExtra("brandName", layer1.getBrandName().get(i));
+                mIntent.putExtra("brandUrl", DAL.getBrandUrl.get(i));
                 startActivity(mIntent);
 
 
@@ -109,14 +118,11 @@ notifyAdapter(myAdapter,listView);
 
 
 
-    private void notifyAdapter(final CustomListView adapter, final ListView listView)  {
-        this.runOnUiThread(new Runnable()  {
-            public void run() {
-                listView.setAdapter(adapter);
-                if(adapter != null) {
-                    adapter.notifyDataSetChanged();
-                }
-            }
-        });
-    }
+//    private void notifyAdapter(final CustomListView adapter, final ListView listView)  {
+//        this.runOnUiThread(new Runnable()  {
+//            public void run() {
+//
+//                           }
+//        });
+//    }
 }

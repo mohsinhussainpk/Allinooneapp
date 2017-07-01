@@ -8,14 +8,11 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main"
     tools:context="com.example.mohsinhussain.allinoneapp.MainActivity"
-
     android:id="@+id/leftDrawer"
     android:layout_width="fill_parent"
-    android:layout_height="485dp"
-    android:layout_gravity="start"
-    android:fillViewport="true"
+    android:layout_height="fill_parent"
     android:background="#fff"
-    android:scrollbarSize="4dp"
+
 
 
     >
@@ -29,94 +26,98 @@
 
 
 >
-<RelativeLayout
-    android:id="@+id/RelativeLayout01"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="10dp">
 
 
-    <ImageButton
-        android:id="@+id/shoppingImage"
-      style="@style/ImageStyle"
-        android:src="@drawable/shoppingcart"
-        android:onClick="moveToBrandsList"
+        <ImageButton
+            android:id="@+id/shoppingImage"
+            style="@style/ImageStyle"
+            android:onClick="moveToBrandsList"
+            android:src="@drawable/shoppingcart"
 
 
+            />
+
+        <TextView
+            android:id="@+id/textviewShopping"
+            style="@style/TextStyle"
+
+            android:layout_below="@+id/shoppingImage"
+
+            android:paddingLeft="10dp"
+            android:text="Shopping"
+
+            />
+
+        <ImageButton
+            android:id="@+id/foodImage"
+            style="@style/ImageStyle"
+            android:layout_toRightOf="@+id/shoppingImage"
+            android:onClick="moveToBrandsList"
+            android:src="@drawable/food"
 
 
-        />
-    <TextView
-        android:layout_below="@+id/shoppingImage"
+            />
 
-        android:text="Shopping"
+        <TextView
+            android:id="@+id/textviewFood"
+            style="@style/TextStyle"
+            android:layout_below="@+id/foodImage"
+            android:layout_toRightOf="@+id/shoppingImage"
+            android:paddingLeft="25dp"
+            android:text="Food"
 
-        style="@style/TextStyle"
-        android:paddingLeft="10dp"
+            />
 
-        />
-
-    <ImageButton
-        android:id="@+id/foodImage"
-        style="@style/ImageStyle"
-        android:layout_toRightOf="@+id/shoppingImage"
-        android:src="@drawable/food"
-
-
-        />
-    <TextView
-
-        style="@style/TextStyle"
-        android:layout_toRightOf="@+id/shoppingImage"
-        android:paddingLeft="25dp"
-        android:layout_below="@+id/foodImage"
-        android:text="Food"
-
-        />
-
-    <ImageButton
-        android:id="@+id/carhiringImage"
-        style="@style/ImageStyle"
-        android:layout_toRightOf="@+id/foodImage"
-        android:src="@drawable/carbuy"
+        <ImageButton
+            android:id="@+id/carhiringImage"
+            style="@style/ImageStyle"
+            android:layout_toRightOf="@+id/foodImage"
+            android:src="@drawable/carbuy"
 
 
-        />
-    <TextView
+            />
 
-        style="@style/TextStyle"
-        android:layout_below="@+id/carhiringImage"
+        <TextView
 
-        android:paddingLeft="90dp"
-        android:layout_toRightOf="@+id/shoppingImage"
+            style="@style/TextStyle"
+            android:layout_below="@+id/carhiringImage"
 
-
-
-        android:text="Carhiring"
-
-        />
-
-    <ImageButton
-        android:id="@+id/classifiedSitesImage"
-        style="@style/ImageStyle"
-        android:layout_toRightOf="@+id/carhiringImage"
-        android:src="@drawable/onlinejobsearchsymbol"
+            android:layout_toRightOf="@+id/shoppingImage"
+            android:paddingLeft="90dp"
 
 
-        />
-    <TextView
+            android:text="Carhiring"
 
-        style="@style/TextStyle"
-        android:layout_toRightOf="@+id/carhiringImage"
-        android:paddingLeft="9dp"
-        android:layout_below="@+id/classifiedSitesImage"
-        android:text="Classified Sites"
+            />
 
-        />
-
+        <ImageButton
+            android:id="@+id/classifiedSitesImage"
+            style="@style/ImageStyle"
+            android:layout_toRightOf="@+id/carhiringImage"
+            android:src="@drawable/onlinejobsearchsymbol"
 
 
-</RelativeLayout>
+            />
+
+        <TextView
+
+            style="@style/TextStyle"
+            android:layout_below="@+id/classifiedSitesImage"
+            android:layout_toRightOf="@+id/carhiringImage"
+            android:paddingLeft="9dp"
+            android:text="Classified Sites"
+
+            />
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/RelativeLayout02"

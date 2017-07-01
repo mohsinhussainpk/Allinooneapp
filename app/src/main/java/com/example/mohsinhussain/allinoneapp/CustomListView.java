@@ -24,6 +24,7 @@ public class CustomListView extends ArrayAdapter<String> {
     Integer[] ImagePath;
      Context mcontext;
 
+
     public CustomListView(Activity context, ArrayList<String> brand, Integer[] ImagePath) {
         super(context, R.layout.custom_view);
         this.brand = brand;
@@ -57,7 +58,7 @@ public class CustomListView extends ArrayAdapter<String> {
         } else {
             mViewHolder = (ViewHolder) convertView.getTag();
         }
-        mViewHolder.mFlag.setImageResource(ImagePath[position]);
+//        mViewHolder.mFlag.setImageResource(ImagePath[position]);
         mViewHolder.mName.setText(brand.get(position));
 
         return convertView;
