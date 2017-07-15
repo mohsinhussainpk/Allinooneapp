@@ -70,7 +70,7 @@ public class StoresActivity extends AppCompatActivity {
 //        op.onPreExecute();
 
 
-        String category=getIntent().getStringExtra(MainActivity.CATEGORY);
+        String category=getIntent().getStringExtra("category");
 
 //layer.searchProfile();
 
@@ -111,7 +111,7 @@ public class StoresActivity extends AppCompatActivity {
         CustomListView myAdapter = null;
 
         try {
-                    Thread.sleep(400);
+                    Thread.sleep(500);
                            myAdapter = new CustomListView(StoresActivity.this, DAL.getBrandName, DAL.getImageUrl);
 
 
@@ -133,6 +133,7 @@ public class StoresActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
                 Intent mIntent = new Intent(StoresActivity.this, Webview.class);
                 mIntent.putExtra("brandUrl", DAL.getBrandUrl.get(i));
                 startActivity(mIntent);

@@ -88,7 +88,7 @@ public class DAL  {
     Scanner scanner;
     public static int  counter = 0;
     private int array_position;
-    private static ProgressDialog Dialog;
+
 //    private StorageReference mStorageRef;
 
     //public static String[] getBrandCategory=new  String[10];
@@ -304,7 +304,7 @@ public class DAL  {
 
     public static void searchProfile(String category) {
 
-
+        final ProgressDialog Dialog;
         Dialog = new ProgressDialog(context);
         Dialog.setMessage("Loading...");
         Dialog.show();
@@ -360,7 +360,7 @@ public class DAL  {
 
 
                 }
-                Dialog.hide();
+                Dialog.dismiss();;
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -390,7 +390,10 @@ public class DAL  {
     }
 
     public static void sliderDetail() {
-
+         final ProgressDialog Dialog;
+        Dialog = new ProgressDialog(context);
+        Dialog.setMessage("Loading...");
+        Dialog.show();
 
         sliderImage=new ArrayList<String>();
         sliderUrl=new ArrayList<String>();
@@ -410,7 +413,7 @@ public class DAL  {
                 for (DataSnapshot record : dataSnapshot.getChildren()) {
 
 
-                    Log.i("DAL::deleteProfile", record.child("Name").getValue(String.class) + " "  );
+                   // Log.i("DAL::deleteProfile", record.child("Name").getValue(String.class) + " "  );
                     //      Log.i("DAL::deleteProfile", counter + " "  );
 
                     //Log.i("DAL::deleteProfile", record.child("Roll").getValue(String.class) + " "  );
@@ -436,7 +439,7 @@ public class DAL  {
 
 
                 }
-
+                Dialog.dismiss();
 
             }
             @Override

@@ -80,7 +80,11 @@ public class CustomListView extends ArrayAdapter<String> {
         }
         notifyDataSetChanged();
 
-        Picasso.with(mcontext).load(images.get(position)).into(mViewHolder.mFlag);
+        if(MainActivity.flag==false)
+        {
+            Picasso.with(mcontext).load(images.get(position)).into(mViewHolder.mFlag);
+
+        }
 
         mViewHolder.mName.setText(brand.get(position));
 

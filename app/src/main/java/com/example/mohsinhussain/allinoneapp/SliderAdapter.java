@@ -22,14 +22,14 @@ import static com.example.mohsinhussain.allinoneapp.R.id.imageView;
 
 public class SliderAdapter extends PagerAdapter {
 
-    private ArrayList<Integer> images;
+    private ArrayList<String> images;
     private LayoutInflater inflater;
     private Context context;
     View myImageLayout;
     ViewPager mPager;
 
 
-    public SliderAdapter(Context context, ArrayList<Integer> images) {
+    public SliderAdapter(Context context, ArrayList<String> images) {
         this.context = context;
         this.images=images;
         inflater = LayoutInflater.from(context);
@@ -59,7 +59,9 @@ public class SliderAdapter extends PagerAdapter {
                 ImageView myImage = (ImageView) myImageLayout
                                 .findViewById(R.id.image);
 
-                myImage.setImageResource(images.get(position));
+        Glide.with(context)
+                .load(images.get(position))
+                .into(myImage);
                 view.addView(myImageLayout, 0);
                 return myImageLayout;
 //        inflater = ((MainActivity) context).getLayoutInflater();

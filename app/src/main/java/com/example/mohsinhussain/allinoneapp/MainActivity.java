@@ -11,9 +11,13 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -23,7 +27,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,23 +46,25 @@ import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BottomNavigtionViewActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     //ViewPager viewPager;
     //CustomSwipeAdapter customSwipeAdapter;
+
     public static final String CATEGORY = "category";
     private static String DB_NAME = "Brand Records";
 
     private  ViewPager mPager;
     private static int currentPage = 0;
     private static final Integer[] XMEN= {R.drawable.a,R.drawable.armchair,R.drawable.taxi,R.drawable.b,R.drawable.blackbackground};
-    private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
+
+
+    private ArrayList<String> XMENArray = DAL.sliderImage;
 
 
     int click = 0;
     public static String category = "";
-    static DAL layer;
     TextView textviewShoppiing;
 
     TextView textviewFood ;
@@ -64,7 +73,7 @@ public class MainActivity extends AppCompatActivity
     TextView textViewJobSite;
     TextView textViewNews;
     TextView textViewWallets;
-    TextView textViewTechNews;
+    TextView textViewOffers;
     TextView textViewBooking;
     TextView textViewGrocery;
     TextView textViewCarSite;
@@ -86,6 +95,7 @@ public class MainActivity extends AppCompatActivity
     TextView textViewEbuzz;
     TextView textViewMusic;
     TextView textViewLegal;
+    static boolean  flag=false;
 
 
 
@@ -94,25 +104,35 @@ public class MainActivity extends AppCompatActivity
     public static DatabaseReference database;
     public static DatabaseReference table;
     public static StorageReference mStorageRef;
+
+
+    public static DAL layer;
   //  static DAL layer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
-//        ProgressDialog progress = new ProgressDialog(this);
-//        progress.setMessage("Loading");
-//        progress.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-//        progress.setIndeterminate(false);
-//       progress.show();
+
+        //for making bottom bar
+
+//        LinearLayout linearLayout=(LinearLayout) findViewById(R.id.myfragment);
+//        View wizard = getLayoutInflater().inflate(R.layout.activity_main, null);
+//        linearLayout.addView(wizard);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+      setContentView(R.layout.activity_main);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+     // MyDrawerLayout drawer = (MyDrawerLayout)findViewById(R.id.drawer_layout);
+//        drawer.openDrawer(linearLayout);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout)findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -121,11 +141,16 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        init();
-        DAL layer=new DAL(this,this);
-        // layer.sliderDetail();
-        layer.searchProfile("");
 
+
+
+
+
+        init();
+         layer=new DAL(this,this);
+        // layer.sliderDetail();
+
+        Log.i("count", IntroActivity.count + " "  );
 
 
 
@@ -148,7 +173,6 @@ public class MainActivity extends AppCompatActivity
 //layer.searchProfile();
 
         //layer.printData();
-
 
 
 
@@ -292,7 +316,7 @@ public class MainActivity extends AppCompatActivity
         textViewRealState = (TextView) findViewById(R.id.realstate);
         textViewPriceCompany = (TextView) findViewById(R.id.pricecomapnysite);
         textViewEducation = (TextView) findViewById(R.id.education);
-        textViewTechNews = (TextView) findViewById(R.id.technews);
+        textViewOffers = (TextView) findViewById(R.id.offers);
         textViewTravelling = (TextView) findViewById(R.id.travelsite);
         textViewHomeServices = (TextView) findViewById(R.id.HomeServiceSite);
         textViewMedicine = (TextView) findViewById(R.id.medicineSite);
@@ -335,6 +359,10 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.newsImage:
                 category = textViewNews.getText().toString();
+               flag=true;
+
+
+
                 break;
             case R.id.mobileWalletsImage:
                 category = textViewWallets.getText().toString();
@@ -357,8 +385,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.educationSiteImage:
                 category = textViewEducation.getText().toString();
                 break;
-            case R.id.technewsSiteImage:
-                category = textViewTechNews.getText().toString();
+            case R.id.offersSiteImage:
+                category = textViewOffers.getText().toString();
                 break;
             case R.id.TraveletsiteImage:
                 category = textViewTravelling.getText().toString();
@@ -412,24 +440,41 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-             Intent intent=new Intent(this,StoresActivity.class);
-
-        layer.searchProfile(category);
-
-        intent.putExtra(CATEGORY,category);
+        if(flag)
+        {
 
 
-        startActivity(intent);
-        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
+            Intent intent = new Intent(this, NewsAndDealsActivity.class);
+            intent.putExtra(CATEGORY, category);
+
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+
+            flag=false;
+        }
+        else {
+
+            Intent intent = new Intent(this, StoresActivity.class);
+
+            layer.searchProfile(category);
+
+            intent.putExtra("category", category);
+
+
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+        }
     }
 
     private void init() {
 
 
-        for(int i=0;i<XMEN.length;i++)
-            XMENArray.add(XMEN[i]);
+//        for(int i=0;i<XMEN.length;i++)
+//            XMENArray.add(XMEN[i]);
 
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(new SliderAdapter(MainActivity.this,XMENArray));
@@ -466,6 +511,8 @@ public class MainActivity extends AppCompatActivity
 //        table = database.child(ENTITY_NAME_PROFILES);
 
         mStorageRef = FirebaseStorage.getInstance().getReference();
+        layer.searchProfile("");
+
 
 
 

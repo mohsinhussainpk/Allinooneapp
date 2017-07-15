@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main"
-    tools:context="com.example.mohsinhussain.allinoneapp.MainActivity"
-    android:id="@+id/leftDrawer"
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/app_bar_main"
+        tools:context="com.example.mohsinhussain.allinoneapp.MainActivity"
+
+        android:id="@+id/leftDrawer"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#fff"
@@ -364,7 +366,7 @@ android:id="@+id/education"
             />
 
         <ImageButton
-            android:id="@+id/technewsSiteImage"
+            android:id="@+id/offersSiteImage"
             style="@style/ImageStyle"
             android:layout_toRightOf="@+id/educationSiteImage"
             android:src="@drawable/technews"
@@ -372,19 +374,19 @@ android:id="@+id/education"
 
             />
         <TextView
-android:id="@+id/technews"
+android:id="@+id/offers"
             style="@style/TextStyle"
             android:layout_toRightOf="@+id/educationSiteImage"
             android:paddingLeft="8dp"
-            android:layout_below="@+id/technewsSiteImage"
-            android:text="Tech News"
+            android:layout_below="@+id/offersSiteImage"
+            android:text="Offers"
 
             />
 
         <ImageButton
             android:id="@+id/TraveletsiteImage"
             style="@style/ImageStyle"
-            android:layout_toRightOf="@+id/technewsSiteImage"
+            android:layout_toRightOf="@+id/offersSiteImage"
             android:src="@drawable/taxi"
             android:onClick="moveToBrandsList"
 
@@ -396,7 +398,7 @@ android:id="@+id/technews"
             android:layout_below="@+id/TraveletsiteImage"
 
             android:paddingLeft="10dp"
-            android:layout_toRightOf="@+id/technewsSiteImage"
+            android:layout_toRightOf="@+id/offersSiteImage"
 
 
 

@@ -6,6 +6,6 @@
         android:id="@+id/image"
 
         style="@style/ImageStyle3"
-        android:src="@drawable/a"
+
         />
 </FrameLayout>

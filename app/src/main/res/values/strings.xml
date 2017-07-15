@@ -16,5 +16,8 @@
     <string name="title_slide3">Alert on 100%</string>
     <string name="desc_slide3">It will alert you when battery reaches 100%</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

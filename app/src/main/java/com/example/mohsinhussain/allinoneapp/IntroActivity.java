@@ -3,9 +3,11 @@ package com.example.mohsinhussain.allinoneapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Message;
+import android.support.design.internal.BottomNavigationItemView;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -28,6 +30,7 @@ import com.google.firebase.storage.StorageReference;
 
 public class IntroActivity extends Activity {
     private ViewPager viewPager;
+
     private ViewPagerAdapter viewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
@@ -38,6 +41,8 @@ public class IntroActivity extends Activity {
     public static DatabaseReference table;
     public static StorageReference mStorageRef;
     private static String DB_NAME = "Brand Records";
+    public static int  count=0;
+    int tempInt = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -52,15 +57,13 @@ public class IntroActivity extends Activity {
 //        table = database.child(ENTITY_NAME_PROFILES);
 
         mStorageRef = FirebaseStorage.getInstance().getReference();
-
-        MainActivity m=new MainActivity();
+        DAL layer = new DAL(this, this);
+        MainActivity m = new MainActivity();
+        SharedPreferences settings = getSharedPreferences("prefs", 0);
+        boolean firstRun = settings.getBoolean("firstRun", true);
         m.initializeConnection();
 
-
-
-
-
-
+        layer.sliderDetail();
 
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
@@ -80,9 +83,60 @@ public class IntroActivity extends Activity {
         viewPager.setAdapter(viewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
+        //when splash screen is on only first time
+
+//        if ( firstRun ) {
+//
+//            m.initializeConnection();
+//            layer.sliderDetail();
+//
+//
+//            viewPager = (ViewPager) findViewById(R.id.view_pager);
+//            dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+//            btnSkip = (Button) findViewById(R.id.btn_skip);
+//            btnNext = (Button) findViewById(R.id.btn_next);
+//
+//            layouts = new int[]{
+//                    R.layout.slide1_layout,
+//                    R.layout.slide2_layout,
+//                    R.layout.slide3_layout};
+//
+//            // adding bottom dots
+//            addBottomDots(0);
+//
+//            viewPagerAdapter = new ViewPagerAdapter();
+//            viewPager.setAdapter(viewPagerAdapter);
+//            viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+//        }
+//        else
+//        {
+//            m.initializeConnection();
+//
+//            layer.sliderDetail();
+//
+//            Intent intent = new Intent();
+//            //intent.setClass(MainActivity.this, TemporaryActivity.class);
+//            startActivity(new Intent(this, MainActivity.class));
+//        }
+//
+//
 
 
+    }
 
+    public int readSharedPreferenceInt(String spName,String key){
+        SharedPreferences sharedPreferences = getSharedPreferences(spName,Context.MODE_PRIVATE);
+        return tempInt = sharedPreferences.getInt(key, 0);
+    }
+
+    //write shared preferences in integer
+    public void writeSharedPreference(int ammount,String spName,String key ){
+
+        SharedPreferences sharedPreferences = getSharedPreferences(spName, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        editor.putInt(key, ammount);
+        editor.commit();
     }
     public  void btnSkipClick(View v)
     {
@@ -159,8 +213,18 @@ public class IntroActivity extends Activity {
 
     private void launchHomeScreen() {
 
+        //   startActivity(new Intent(this, com.example.mohsinhussain.allinoneapp.BottomNavigtionViewActivity.class));
         startActivity(new Intent(this, MainActivity.class));
-        finish();
+//        SharedPreferences settings = getSharedPreferences("prefs", 0);
+//        SharedPreferences.Editor editor = settings.edit();
+//        editor.putBoolean("firstRun", false);
+//        editor.commit();
+//            count++;
+//            finish();
+
+
+
+
     }
 
 
