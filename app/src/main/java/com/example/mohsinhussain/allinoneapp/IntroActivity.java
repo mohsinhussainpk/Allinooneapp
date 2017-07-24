@@ -36,11 +36,6 @@ public class IntroActivity extends Activity {
     private TextView[] dots;
     private int[] layouts;
     private Button btnSkip, btnNext;
-    public static FirebaseDatabase firebase;
-    public static DatabaseReference database;
-    public static DatabaseReference table;
-    public static StorageReference mStorageRef;
-    private static String DB_NAME = "Brand Records";
     public static int  count=0;
     int tempInt = 0;
     @Override
@@ -50,20 +45,13 @@ public class IntroActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        firebase = FirebaseDatabase.getInstance();
-        //firebase.setPersistenceEnabled(true);
 
-        database = firebase.getReference(DB_NAME);
-//        table = database.child(ENTITY_NAME_PROFILES);
-
-        mStorageRef = FirebaseStorage.getInstance().getReference();
-        DAL layer = new DAL(this, this);
-        MainActivity m = new MainActivity();
+       // MainActivity m = new MainActivity();
         SharedPreferences settings = getSharedPreferences("prefs", 0);
         boolean firstRun = settings.getBoolean("firstRun", true);
-        m.initializeConnection();
+        //m.initializeConnection();
 
-        layer.sliderDetail();
+
 
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
@@ -85,41 +73,37 @@ public class IntroActivity extends Activity {
 
         //when splash screen is on only first time
 
-//        if ( firstRun ) {
-//
-//            m.initializeConnection();
-//            layer.sliderDetail();
-//
-//
-//            viewPager = (ViewPager) findViewById(R.id.view_pager);
-//            dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-//            btnSkip = (Button) findViewById(R.id.btn_skip);
-//            btnNext = (Button) findViewById(R.id.btn_next);
-//
-//            layouts = new int[]{
-//                    R.layout.slide1_layout,
-//                    R.layout.slide2_layout,
-//                    R.layout.slide3_layout};
-//
-//            // adding bottom dots
-//            addBottomDots(0);
-//
-//            viewPagerAdapter = new ViewPagerAdapter();
-//            viewPager.setAdapter(viewPagerAdapter);
-//            viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-//        }
-//        else
-//        {
-//            m.initializeConnection();
-//
-//            layer.sliderDetail();
-//
-//            Intent intent = new Intent();
-//            //intent.setClass(MainActivity.this, TemporaryActivity.class);
-//            startActivity(new Intent(this, MainActivity.class));
-//        }
-//
-//
+        if ( firstRun ) {
+
+
+
+
+            viewPager = (ViewPager) findViewById(R.id.view_pager);
+            dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+            btnSkip = (Button) findViewById(R.id.btn_skip);
+            btnNext = (Button) findViewById(R.id.btn_next);
+
+            layouts = new int[]{
+                    R.layout.slide1_layout,
+                    R.layout.slide2_layout,
+                    R.layout.slide3_layout};
+
+            // adding bottom dots
+            addBottomDots(0);
+
+            viewPagerAdapter = new ViewPagerAdapter();
+            viewPager.setAdapter(viewPagerAdapter);
+            viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+        }
+        else
+        {
+
+            Intent intent = new Intent();
+            //intent.setClass(MainActivity.this, TemporaryActivity.class);
+            startActivity(new Intent(this, SplashActivity.class));
+        }
+
+
 
 
     }
@@ -214,13 +198,13 @@ public class IntroActivity extends Activity {
     private void launchHomeScreen() {
 
         //   startActivity(new Intent(this, com.example.mohsinhussain.allinoneapp.BottomNavigtionViewActivity.class));
-        startActivity(new Intent(this, MainActivity.class));
-//        SharedPreferences settings = getSharedPreferences("prefs", 0);
-//        SharedPreferences.Editor editor = settings.edit();
-//        editor.putBoolean("firstRun", false);
-//        editor.commit();
-//            count++;
-//            finish();
+        startActivity(new Intent(this, SplashActivity.class));
+        SharedPreferences settings = getSharedPreferences("prefs", 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putBoolean("firstRun", false);
+        editor.commit();
+            count++;
+            finish();
 
 
 

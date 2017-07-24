@@ -61,18 +61,15 @@ public class NewsAndDealsActivity extends AppCompatActivity {
 
 
         final String category=getIntent().getStringExtra(MainActivity.CATEGORY);
-         DAL layer=new DAL();
 
 //layer.searchProfile();
 
-if(category.equalsIgnoreCase("News"))
-{
 
     list.add("Tech News");
     list.add("English News");
     list.add("Urdu News");
 
-}
+
 
 
 
@@ -123,6 +120,9 @@ if(category.equalsIgnoreCase("News"))
  listView1 = (ListView) findViewById(R.id.listView123);
    ArrayAdapter myAdapter=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
         listView1.setAdapter(myAdapter);
+//        TextView text = (TextView) adapter.getView(0, null, null); // as an example, use the first element in the list
+//        Spannable str = (Spannable) text.getText();
+//        str.setSpan(new StyleSpan(Typeface.BOLD), 0, str.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
 
 
@@ -130,28 +130,16 @@ if(category.equalsIgnoreCase("News"))
 
         // Log.i("DAL::deleteProfile", DAL.getBrandName.size()+"");
 
+        final DAL layer=new DAL(this,this);
 
 
         listView1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-               MainActivity.layer.searchProfile(list.get(i));
 
-                Intent mIntent = new Intent(NewsAndDealsActivity.this, StoresActivity.class);
+                layer.searchProfile(list.get(i));
 
-
-                mIntent.putExtra("category", list.get(i));
-
-              //  mIntent.putExtra("brandUrl", DAL.getBrandUrl.get(i));
-
-                startActivity(mIntent);
-
-
-
-
-//                startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
             }
         });

@@ -4,6 +4,7 @@
     android:layout_height="fill_parent">
     <ImageButton
         android:id="@+id/image"
+        android:onClick="sliderImageClick"
 
         style="@style/ImageStyle3"
 

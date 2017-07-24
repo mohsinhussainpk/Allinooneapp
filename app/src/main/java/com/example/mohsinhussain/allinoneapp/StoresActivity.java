@@ -8,9 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -62,8 +67,11 @@ public class StoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stores);
+  MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+        AdView mAdView = (AdView) findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder() .build();
 
-
+        mAdView.loadAd(adRequest);
 
 //        LongOperation op=new LongOperation();
 //        op.execute("");
@@ -110,17 +118,11 @@ public class StoresActivity extends AppCompatActivity {
 
         CustomListView myAdapter = null;
 
-        try {
-                    Thread.sleep(500);
                            myAdapter = new CustomListView(StoresActivity.this, DAL.getBrandName, DAL.getImageUrl);
 
 
 
 
-                       } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
         listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(myAdapter);
 

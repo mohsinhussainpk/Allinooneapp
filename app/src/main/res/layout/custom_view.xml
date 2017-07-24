@@ -17,6 +17,7 @@
     <TextView
         android:id="@+id/textView"
         android:layout_toRightOf="@+id/imageView"
+        android:textColor="@color/colorPrimary"
 
       style="@style/TextStyle"
 

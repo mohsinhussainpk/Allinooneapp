@@ -8,6 +8,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 public class Webview extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class Webview extends AppCompatActivity {
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
         String url=getIntent().getStringExtra("brandUrl");
+
+        //Toast.makeText(this,url,Toast.LENGTH_LONG).show();
         browser.getSettings().getJavaScriptEnabled();
         browser.getSettings().setBuiltInZoomControls(true);
         browser.loadUrl(url);

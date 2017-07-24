@@ -97,6 +97,14 @@ public class DAL  {
     public DAL(Activity activity, Context context) {
 
         this.activity = activity;
+        firebase = FirebaseDatabase.getInstance();
+        //firebase.setPersistenceEnabled(true);
+
+        database = firebase.getReference(DB_NAME);
+//        table = database.child(ENTITY_NAME_PROFILES);
+
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+
 
 
         this.context = context;
@@ -302,35 +310,29 @@ public class DAL  {
 //        }
 //    }
 
-    public static void searchProfile(String category) {
-
-        final ProgressDialog Dialog;
-        Dialog = new ProgressDialog(context);
-        Dialog.setMessage("Loading...");
-        Dialog.show();
+    public static void searchProfile(final String category) {
+//
+//        final ProgressDialog Dialog;
+//        Dialog = new ProgressDialog(context);
+//        Dialog.setMessage("Loading...");
+//        Dialog.show();
         getBrandName=new ArrayList<String>();
         getBrandUrl=new ArrayList<String>();
         getImageUrl=new ArrayList<String>();
 
 
-        if(category=="")
-        {
-            MainActivity.table = MainActivity.database.child("Shopping");
 
-        }
-        else
-        {
-            MainActivity.table = MainActivity.database.child(category);
-
-        }
-
-
-        MainActivity.table.keepSynced(true);
+            table = database.child(category);
 
 
 
 
-        MainActivity.table.addValueEventListener(new ValueEventListener() {
+        table.keepSynced(true);
+
+
+
+
+        table.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot record : dataSnapshot.getChildren()) {
@@ -360,7 +362,15 @@ public class DAL  {
 
 
                 }
-                Dialog.dismiss();;
+    //            Dialog.dismiss();
+                Intent intent=new Intent(context,StoresActivity.class);//opening the  stores activity as soon as the
+                //progress bar finishes.
+                intent.putExtra("category",category);
+
+                context.startActivity(intent);
+
+                ((Activity)context).overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -393,21 +403,22 @@ public class DAL  {
          final ProgressDialog Dialog;
         Dialog = new ProgressDialog(context);
         Dialog.setMessage("Loading...");
+        int counter1=0;
         Dialog.show();
 
         sliderImage=new ArrayList<String>();
         sliderUrl=new ArrayList<String>();
 
 
-        IntroActivity.table = IntroActivity.database.child("Slider Detail");
+        SplashActivity.table = SplashActivity.database.child("Slider Detail");
 
 
-        IntroActivity.table.keepSynced(true);
+        SplashActivity.table.keepSynced(true);
 
 
 
 
-        IntroActivity.table.addValueEventListener(new ValueEventListener() {
+        SplashActivity.table.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot record : dataSnapshot.getChildren()) {
@@ -419,9 +430,7 @@ public class DAL  {
                     //Log.i("DAL::deleteProfile", record.child("Roll").getValue(String.class) + " "  );
                     sliderImage.add( String.valueOf(record.child("Imgid").getValue(String.class)));
                     sliderUrl.add( String.valueOf(record.child("Url").getValue(String.class)));
-                     Log.i("DAL::sliderimage", sliderImage.get(counter) + " "  );
-                    Log.i("DAL::sliderimageurl", sliderUrl.get(counter) + " "  );
-
+                    //Log.i("DAL::sliderimage",String.valueOf(record.child("Url").getValue(String.class) ));
 //getImageUrl.add("https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/0.jpg?alt=media&token=058741a8-140b-4eab-9443-edd35c2f2f0c");
 //                    getImageUrl.add(String.valueOf(record.child("Imgid").getValue(String.class)));
 //                   URL url = new URL(getImageUrl.get);
@@ -435,6 +444,8 @@ public class DAL  {
                     //Toast.makeText(context,getBrandName.get(counter),Toast.LENGTH_SHORT).show();
                     // Log.i("DAL::deleteProfile", getitemname[counter] + " "  );
                     //Log.i("DAL::deleteProfile", getcgpa[counter] + " "  );
+                   // MainActivity.XMENArray.set(counter1, sliderImage.get(counter1)) ;
+
                     counter++;
 
 
