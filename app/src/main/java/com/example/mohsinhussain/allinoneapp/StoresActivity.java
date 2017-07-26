@@ -72,6 +72,10 @@ public class StoresActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder() .build();
 
         mAdView.loadAd(adRequest);
+//        int visibility = mAdView.getVisibility();
+//        mAdView.setVisibility(AdView.GONE);
+//        mAdView.setVisibility(visibility);
+        //mAdView.bringToFront();
 
 //        LongOperation op=new LongOperation();
 //        op.execute("");
@@ -122,8 +126,8 @@ public class StoresActivity extends AppCompatActivity {
 
 
 
-
         listView = (ListView) findViewById(R.id.listView);
+
         listView.setAdapter(myAdapter);
 
             click++;

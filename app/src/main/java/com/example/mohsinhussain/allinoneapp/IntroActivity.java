@@ -3,6 +3,7 @@ package com.example.mohsinhussain.allinoneapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -45,38 +46,14 @@ public class IntroActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
+        CheckConnetivity check = new CheckConnetivity();
+        Boolean conn = check.isNetworkAvailable(this.getApplicationContext());
 
-       // MainActivity m = new MainActivity();
-        SharedPreferences settings = getSharedPreferences("prefs", 0);
-        boolean firstRun = settings.getBoolean("firstRun", true);
-        //m.initializeConnection();
-
-
-
-
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
-        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnSkip = (Button) findViewById(R.id.btn_skip);
-        btnNext = (Button) findViewById(R.id.btn_next);
-
-        layouts = new int[]{
-                R.layout.slide1_layout,
-                R.layout.slide2_layout,
-                R.layout.slide3_layout};
-
-        // adding bottom dots
-        addBottomDots(0);
-
-        viewPagerAdapter = new ViewPagerAdapter();
-        viewPager.setAdapter(viewPagerAdapter);
-        viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-
-        //when splash screen is on only first time
-
-        if ( firstRun ) {
-
-
-
+            //run your normal code path here
+            // MainActivity m = new MainActivity();
+            SharedPreferences settings = getSharedPreferences("prefs", 0);
+            boolean firstRun = settings.getBoolean("firstRun", true);
+            //m.initializeConnection();
 
             viewPager = (ViewPager) findViewById(R.id.view_pager);
             dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
@@ -94,14 +71,60 @@ public class IntroActivity extends Activity {
             viewPagerAdapter = new ViewPagerAdapter();
             viewPager.setAdapter(viewPagerAdapter);
             viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
-        }
-        else
-        {
 
-            Intent intent = new Intent();
-            //intent.setClass(MainActivity.this, TemporaryActivity.class);
-            startActivity(new Intent(this, SplashActivity.class));
-        }
+            //when splash screen is on only first time
+
+
+            IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+            CheckConnetivity receiver = new CheckConnetivity();
+            registerReceiver(receiver, filter);
+
+            if ( firstRun ) {
+
+
+
+
+                viewPager = (ViewPager) findViewById(R.id.view_pager);
+                dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
+                btnSkip = (Button) findViewById(R.id.btn_skip);
+                btnNext = (Button) findViewById(R.id.btn_next);
+
+                layouts = new int[]{
+                        R.layout.slide1_layout,
+                        R.layout.slide2_layout,
+                        R.layout.slide3_layout};
+
+                // adding bottom dots
+                addBottomDots(0);
+
+                viewPagerAdapter = new ViewPagerAdapter();
+                viewPager.setAdapter(viewPagerAdapter);
+                viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
+            }
+
+
+            else
+            {
+
+                Intent intent = new Intent();
+                //intent.setClass(MainActivity.this, TemporaryActivity.class);
+                startActivity(new Intent(this, SplashActivity.class));
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                finish();
+            }
+
+
+
+
+
+        //when not connection available
+
+            //Send a warning message to the user
+
+
+
+
+
 
 
 
@@ -199,6 +222,8 @@ public class IntroActivity extends Activity {
 
         //   startActivity(new Intent(this, com.example.mohsinhussain.allinoneapp.BottomNavigtionViewActivity.class));
         startActivity(new Intent(this, SplashActivity.class));
+        overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
         SharedPreferences settings = getSharedPreferences("prefs", 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("firstRun", false);
@@ -247,6 +272,9 @@ public class IntroActivity extends Activity {
             View view = (View) object;
             container.removeView(view);
         }
+
+
+
 
     }
 

@@ -21,18 +21,31 @@ public class Webview extends AppCompatActivity {
         setContentView(R.layout.activity_webview);
         browser = (WebView)findViewById(R.id.webView);
         progressBar= (ProgressBar) findViewById(R.id.progressBar);
-        WebSettings webSettings = browser.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        String url=getIntent().getStringExtra("brandUrl");
 
-        //Toast.makeText(this,url,Toast.LENGTH_LONG).show();
-        browser.getSettings().getJavaScriptEnabled();
-        browser.getSettings().setBuiltInZoomControls(true);
-        browser.loadUrl(url);
-        browser.setWebViewClient(new webclient());
+        CheckConnetivity check = new CheckConnetivity();
+        Boolean conn = check.isNetworkAvailable(this.getApplicationContext());
+
+        if(conn)
+        {
+            WebSettings webSettings = browser.getSettings();
+            webSettings.setJavaScriptEnabled(true);
+            String url=getIntent().getStringExtra("brandUrl");
+
+            //Toast.makeText(this,url,Toast.LENGTH_LONG).show();
+            browser.getSettings().getJavaScriptEnabled();
+            browser.getSettings().setBuiltInZoomControls(true);
+            browser.loadUrl(url);
+            browser.setWebViewClient(new webclient());
 
 
 
+
+
+        }
+        else
+        {
+            check.connectivityMessage("Check Network Connection",this);
+        }
 
         // TextView textView= (TextView) findViewById(R.id.textview);
 

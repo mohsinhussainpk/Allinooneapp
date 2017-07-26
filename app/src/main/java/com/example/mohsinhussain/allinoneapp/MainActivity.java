@@ -60,6 +60,7 @@ public class MainActivity extends BottomNavigtionViewActivity
 
     public static final String CATEGORY = "category";
     private static String DB_NAME = "Brand Records";
+    boolean exit;
 
     private  ViewPager mPager;
     private static int currentPage = 0;
@@ -229,6 +230,8 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 //        initializeConnection();
 
+
+
         layer=new DAL(this,this);
         //layer.sliderDetail();
 
@@ -278,12 +281,17 @@ public class MainActivity extends BottomNavigtionViewActivity
 
     @Override
     public void onBackPressed() {
+
+
+        SplashActivity.timer=0; // to open main activty direct when open again (not closed)
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
+        //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
@@ -403,21 +411,27 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
 
+        CheckConnetivity check = new CheckConnetivity();
+        Boolean conn = check.isNetworkAvailable(this.getApplicationContext());
 
-        if(web[position]== "News")
-        {
-            Intent intent = new Intent(this, NewsAndDealsActivity.class);
-            startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+        if(conn) {
+            if (web[position] == "News") {
+                Intent intent = new Intent(this, NewsAndDealsActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
 
+            } else {
+
+                layer.searchProfile(web[position]);
+
+
+            }
         }
+
         else
         {
-
-            layer.searchProfile(web[position]);
-
-
+            check.connectivityMessage("Check Network Connection",this);
 
         }
 
@@ -574,4 +588,8 @@ public class MainActivity extends BottomNavigtionViewActivity
 
         startActivity(mIntent);
     }
+
+
+
+
 }

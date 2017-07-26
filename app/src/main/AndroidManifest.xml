@@ -16,26 +16,41 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
         <activity
             android:name=".IntroActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
+
+            <receiver android:exported="false"
+                android:name=".CheckConnetivity" >
+
+            </receiver>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".StoresActivity" />
         <activity android:name=".Webview" />
         <activity android:name=".TermsAndConditionActivity" />
         <activity android:name=".PrivacyActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+
+
+            />
         <activity android:name=".BottomNavigtionViewActivity" />
         <activity android:name=".NewsAndDealsActivity" />
-        <activity android:name=".SplashActivity"></activity>
+        <activity android:name=".SplashActivity"
+
+
+
+            ></activity>
     </application>
 
 </manifest>

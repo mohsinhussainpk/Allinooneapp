@@ -404,7 +404,7 @@ public class DAL  {
         Dialog = new ProgressDialog(context);
         Dialog.setMessage("Loading...");
         int counter1=0;
-        Dialog.show();
+//        Dialog.show();
 
         sliderImage=new ArrayList<String>();
         sliderUrl=new ArrayList<String>();
@@ -450,7 +450,7 @@ public class DAL  {
 
 
                 }
-                Dialog.dismiss();
+//                Dialog.dismiss();
 
             }
             @Override
