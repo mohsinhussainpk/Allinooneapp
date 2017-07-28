@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -70,14 +71,22 @@ public class SliderAdapter extends PagerAdapter {
          myImageLayout = inflater.inflate(R.layout.slide, view, false);
                  myImage = (ImageView) myImageLayout
                                 .findViewById(R.id.image);
-
+//
         Glide.with(context)
                 .load(images.get(position))
+                .placeholder(R.drawable.ic_menu_camera)
+//                .fitCenter()
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .error(R.drawable.ic_menu_camera)
                 .into(myImage);
-                view.addView(myImageLayout, 0);
-                return myImageLayout;
 
 
+
+//        Picasso.with(context).load(images.get(position)).tag(context).placeholder(R.drawable.ic_menu_camera).resize(150, 150)
+//                .error(R.drawable.ic_menu_camera).into(myImage);
+//        //Picasso.with(mcontext).load(images.get(position)).into(mViewHolder.mFlag);
+        view.addView(myImageLayout, 0);
+        return myImageLayout;
 
 
 //        inflater = ((MainActivity) context).getLayoutInflater();

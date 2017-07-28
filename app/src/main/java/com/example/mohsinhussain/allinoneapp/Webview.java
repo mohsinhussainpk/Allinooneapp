@@ -2,13 +2,19 @@ package com.example.mohsinhussain.allinoneapp;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 
 public class Webview extends AppCompatActivity {
 
@@ -19,6 +25,8 @@ public class Webview extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
+
+
         browser = (WebView)findViewById(R.id.webView);
         progressBar= (ProgressBar) findViewById(R.id.progressBar);
 
@@ -27,6 +35,9 @@ public class Webview extends AppCompatActivity {
 
         if(conn)
         {
+
+
+
             WebSettings webSettings = browser.getSettings();
             webSettings.setJavaScriptEnabled(true);
             String url=getIntent().getStringExtra("brandUrl");
@@ -51,6 +62,18 @@ public class Webview extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+
+
+            super.onBackPressed();
+        if (MainActivity.mInterstitialAd.isLoaded()) {
+            MainActivity.mInterstitialAd.show();
+        }
+        //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
+
+    }
+
 
     public class webclient extends WebViewClient {
         @Override
@@ -72,7 +95,7 @@ public class Webview extends AppCompatActivity {
             super.onPageFinished(view, url);
             progressBar.setVisibility(View.GONE);
         }
-    }
+            }
 
     }
 

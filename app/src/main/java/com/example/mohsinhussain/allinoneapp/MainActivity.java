@@ -40,6 +40,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -63,8 +64,7 @@ public class MainActivity extends BottomNavigtionViewActivity
     boolean exit;
 
     private  ViewPager mPager;
-    private static int currentPage = 0;
-    private static int currentImage =-1;
+
    // private static final Integer[] XMEN= {R.drawable.a,R.drawable.armchair,R.drawable.taxi,R.drawable.b,R.drawable.blackbackground};
 
 
@@ -189,9 +189,12 @@ public class MainActivity extends BottomNavigtionViewActivity
 
     };
 
+    int currentImage =-1;
     public static DAL layer;
     ImageButton GridImageButton;
   //  static DAL layer;
+  public static InterstitialAd mInterstitialAd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -210,6 +213,7 @@ public class MainActivity extends BottomNavigtionViewActivity
         CustomGrid adapter = new CustomGrid(this, web, imageId);
         grid=(GridView)findViewById(R.id.customgrid);
         grid.setAdapter(adapter);
+        grid.setFocusable(false);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -256,6 +260,9 @@ public class MainActivity extends BottomNavigtionViewActivity
         mAdView.loadAd(adRequest);
 
 
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 //        ImageButton imageButton= (ImageButton) findViewById(R.id.shoppingImage);
 //        imageButton.setOnClickListener(new View.OnClickListener() {
@@ -440,38 +447,52 @@ public class MainActivity extends BottomNavigtionViewActivity
     }
     private void init() {
 
+        final int[] currentPage = {0};
 
-        SliderAdapter sliderAdapter=new SliderAdapter(MainActivity.this,XMENArray);
+        final SliderAdapter[] sliderAdapter = {new SliderAdapter(MainActivity.this, XMENArray)};
         mPager = (ViewPager) findViewById(R.id.pager);
 
-        mPager.setAdapter(sliderAdapter);
+        mPager.setAdapter(sliderAdapter[0]);
         mPager.beginFakeDrag();
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 
-        final float[] startXValue = {1};
-        //currentImage=0;
-
         // Auto start of viewpager
         final Handler handler = new Handler();
-
+        final Runnable Update;
        // currentImage=0;
 
-        final Runnable Update = new Runnable() {
+         Update = new Runnable() {
             public void run() {
-                if (currentPage == XMENArray.size()) {
-                    currentPage = 0;
+                if (currentPage[0] == XMENArray.size()) {
+                    currentPage[0] = 0;
                     currentImage=-1;
                 }
 
 
-                mPager.setCurrentItem(currentPage, false);
-                currentPage++;
+                mPager.setCurrentItem(currentPage[0], false);
+                currentPage[0]++;
 
                 currentImage++;
                // Toast.makeText(getApplicationContext(),String.valueOf(currentImage),Toast.LENGTH_LONG).show();
             }
         };
+
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+
+                handler.post(Update);
+
+
+            }
+        }, 2000, 2000);
+
+
+
+
+
 
 //        mPager.setOnTouchListener(new View.OnTouchListener() {
 //            @Override
@@ -539,20 +560,6 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
         //
-
-        Timer swipeTimer = new Timer();
-        swipeTimer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-
-                handler.post(Update);
-
-
-            }
-        }, 2000, 2000);
-
-
-
 
 
 }

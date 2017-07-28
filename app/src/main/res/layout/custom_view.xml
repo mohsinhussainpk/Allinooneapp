@@ -9,6 +9,7 @@
   <ImageView
       android:id="@+id/imageView"
       style="@style/ImageStyle1"
+      android:adjustViewBounds="true"
 
 
 

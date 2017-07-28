@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
@@ -20,6 +21,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import static android.R.attr.x;
+import static android.R.attr.y;
 import static com.example.mohsinhussain.allinoneapp.DAL.bitmaps;
 
 /**
@@ -82,7 +85,11 @@ public class CustomListView extends ArrayAdapter<String> {
 
         if(MainActivity.flag==false)
         {
-            Picasso.with(mcontext).load(images.get(position)).into(mViewHolder.mFlag);
+            Picasso.with(mcontext).load(images.get(position)).placeholder(R.drawable.ic_menu_camera).resize(150, 150)
+                    .error(R.drawable.ic_menu_camera).into(mViewHolder.mFlag);
+//            Glide.with(mcontext)
+//                    .load(images.get(position))
+//                    .into(mViewHolder.mFlag);
 
         }
 
