@@ -1,6 +1,7 @@
 package com.example.mohsinhussain.allinoneapp;
 
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -40,6 +41,7 @@ public class Webview extends AppCompatActivity {
 
             WebSettings webSettings = browser.getSettings();
             webSettings.setJavaScriptEnabled(true);
+            webSettings.setRenderPriority(WebSettings.RenderPriority.HIGH);
             String url=getIntent().getStringExtra("brandUrl");
 
             //Toast.makeText(this,url,Toast.LENGTH_LONG).show();
@@ -48,8 +50,14 @@ public class Webview extends AppCompatActivity {
             browser.loadUrl(url);
             browser.setWebViewClient(new webclient());
 
-
-
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                // chromium, enable hardware acceleration
+                browser.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+            } else {
+                // older android version, disable hardware acceleration
+                browser.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+            }
+            browser.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
 
 
         }
@@ -71,6 +79,9 @@ public class Webview extends AppCompatActivity {
             MainActivity.mInterstitialAd.show();
         }
         //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
+
+        finish();
+        overridePendingTransition(R.anim.slide_enter,R.anim.slide_exit);
 
     }
 

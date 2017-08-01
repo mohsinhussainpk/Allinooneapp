@@ -14,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.util.Base64;
 import android.util.Log;
@@ -312,10 +313,10 @@ public class DAL  {
 
     public static void searchProfile(final String category) {
 //
-//        final ProgressDialog Dialog;
-//        Dialog = new ProgressDialog(context);
-//        Dialog.setMessage("Loading...");
-//        Dialog.show();
+        final ProgressDialog Dialog;
+        Dialog = new ProgressDialog(context);
+        Dialog.setMessage("Loading...");
+        Dialog.show();
         getBrandName=new ArrayList<String>();
         getBrandUrl=new ArrayList<String>();
         getImageUrl=new ArrayList<String>();
@@ -366,10 +367,11 @@ public class DAL  {
                 Intent intent=new Intent(context,StoresActivity.class);//opening the  stores activity as soon as the
                 //progress bar finishes.
                 intent.putExtra("category",category);
-
-                context.startActivity(intent);
-
                 ((Activity)context).overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                context.startActivity(intent);
+                Dialog.dismiss();
+
+
 
             }
             @Override
@@ -396,6 +398,7 @@ public class DAL  {
 //            }
 //
 //        }
+
 
     }
 
@@ -450,6 +453,14 @@ public class DAL  {
 
 
                 }
+
+
+                Intent intent=new Intent(context,MainActivity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                ((Activity)context).startActivity(intent);
+                ((Activity)context).overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                ((Activity)context).finish();
+
 //                Dialog.dismiss();
 
             }

@@ -1,5 +1,6 @@
 package com.example.mohsinhussain.allinoneapp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -16,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
 
     public static FirebaseDatabase firebase;
     public static DatabaseReference database;
@@ -48,18 +49,13 @@ public class SplashActivity extends AppCompatActivity {
             DAL layer = new DAL(SplashActivity.this, SplashActivity.this);
             layer.sliderDetail();
 
-            new Handler().postDelayed(new Runnable(){
-                @Override
-                public void run() {
-                /* Create an Intent that will start the Menu-Activity. */
-                    Intent intent=new Intent(SplashActivity.this,MainActivity.class);
-                    //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                    startActivity(intent);
-                    overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-                    finish();
-
-                }
-            }, timer);
+//            new Handler().postDelayed(new Runnable(){
+//                @Override
+//                public void run() {
+//                /* Create an Intent that will start the Menu-Activity. */
+//
+//                }
+//            }, timer);
 
 
 

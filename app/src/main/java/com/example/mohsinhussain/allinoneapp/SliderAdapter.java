@@ -74,7 +74,7 @@ public class SliderAdapter extends PagerAdapter {
 //
         Glide.with(context)
                 .load(images.get(position))
-                .placeholder(R.drawable.ic_menu_camera)
+//                .placeholder(R.drawable.ic_menu_camera)
 //                .fitCenter()
 //                .diskCacheStrategy(DiskCacheStrategy.ALL)
 //                .error(R.drawable.ic_menu_camera)

@@ -13,7 +13,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         style="@style/ImageStyle2"
-        android:src="@drawable/nav_icon"
+        android:src="@drawable/applogoupdated"
         android:id="@+id/imageView"
 
         app:civ_border_width="3dp"

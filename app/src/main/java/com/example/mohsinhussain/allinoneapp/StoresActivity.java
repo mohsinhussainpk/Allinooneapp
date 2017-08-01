@@ -151,10 +151,18 @@ public class StoresActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
 
 
+//        super.onBackPressed();
+//        Intent intent= new Intent(this,MainActivity.class);
+//        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.slide_enter,R.anim.slide_exit);
+    }
 
-//    private void notifyAdapter(final CustomListView adapter, final ListView listView)  {
+    //    private void notifyAdapter(final CustomListView adapter, final ListView listView)  {
 //        this.runOnUiThread(new Runnable()  {
 //            public void run() {
 //

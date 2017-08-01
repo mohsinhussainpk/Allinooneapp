@@ -43,8 +43,8 @@
         <GridView
             android:id="@+id/customgrid"
             android:stretchMode="columnWidth"
-            android:horizontalSpacing="0.3dp"
-            android:verticalSpacing="0.3dp"
+            android:horizontalSpacing="0.5dp"
+            android:verticalSpacing="0.5dp"
             android:background="#2B2E4A"
             android:gravity="center"
             android:layout_below="@+id/adView"

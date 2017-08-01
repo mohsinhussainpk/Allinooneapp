@@ -421,11 +421,18 @@ public class MainActivity extends BottomNavigtionViewActivity
         CheckConnetivity check = new CheckConnetivity();
         Boolean conn = check.isNetworkAvailable(this.getApplicationContext());
 
+       ImageButton imageButton= (ImageButton) findViewById(R.id.os_images);
+
+
         if(conn) {
             if (web[position] == "News") {
                 Intent intent = new Intent(this, NewsAndDealsActivity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+
+                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+
+// for solving the proble after news click animation we should finish the main activity but come back to main actticty it will finish
+
 
 
             } else {

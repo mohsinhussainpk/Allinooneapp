@@ -146,4 +146,15 @@ public class NewsAndDealsActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onBackPressed() {
+
+
+//        super.onBackPressed();
+//        Intent intent= new Intent(this,MainActivity.class);
+//        startActivity(intent);
+        finish();
+        overridePendingTransition(R.anim.slide_enter,R.anim.slide_exit);
+    }
 }
