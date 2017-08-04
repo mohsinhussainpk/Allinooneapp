@@ -11,6 +11,12 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.daimajia.slider.library.Animations.DescriptionAnimation;
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.TextSliderView;
+import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
@@ -54,7 +60,7 @@ import java.util.TimerTask;
 import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends BottomNavigtionViewActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener ,  BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
     //ViewPager viewPager;
     //CustomSwipeAdapter customSwipeAdapter;
@@ -106,7 +112,7 @@ public class MainActivity extends BottomNavigtionViewActivity
     static boolean  flag=false;
 
 
-    GridView grid;
+
     //static String category = "";
     public static FirebaseDatabase firebase;
     public static DatabaseReference database;
@@ -116,32 +122,33 @@ public class MainActivity extends BottomNavigtionViewActivity
     String[] web = {
 
             "News",
-            "Offers",
+            "Deals",
             "Shopping",
             "Food",
-            "Carhiring",
-            "Classified Sites",
-            "Job Site",
-            "Mobile Wallets",
-            "Booking",
+            "Taxi",
+            "Classifieds",
+            "Jobs",
+            "Payments",
+            "Tickets",
             "Grocery",
-            "Car Site",
+            "Car Maintenance",
             "Real State",
-            "Price Company",
+            "Price Comparison",
             "Education",
-            "Travelling",
+            "Travel",
             "Home Service",
-            "Medicines",
+            "Health",
             "Finance",
             "Furniture",
             "Printing",
             "Gifts and Flowers",
-            "Deals and Coupons",
             "Baby and Kids",
             "Women",
             "Delivery Services",
             "Entertainment",
             "Music",
+            "Social",
+
 
 
 
@@ -152,32 +159,33 @@ public class MainActivity extends BottomNavigtionViewActivity
     int[] imageId = {
 
             R.drawable.newspaper,
-            R.drawable.technews,
+            R.drawable.deals,
             R.drawable.shoppingcart,
             R.drawable.food,
-            R.drawable.carbuy,
-            R.drawable.onlinejobsearchsymbol,
+            R.drawable.taxi,
+            R.drawable.classifieds,
             R.drawable.onlinejobsearchsymbol,
             R.drawable.wallet,
-            R.drawable.deals,
+            R.drawable.theaterticket,
             R.drawable.groceriesbag,
-            R.drawable.distancetotravelbetweentwopoints,
+            R.drawable.carbuy,
             R.drawable.realestate,
-            R.drawable.deals,
+            R.drawable.comparison,
             R.drawable.education,
-            R.drawable.taxi,
+            R.drawable.distancetotravelbetweentwopoints,
             R.drawable.homeservices,
             R.drawable.medicines,
             R.drawable.finance,
             R.drawable.armchair,
             R.drawable.printbutton,
             R.drawable.gift,
-            R.drawable.deals,
+
             R.drawable.babydummywithbearheadsilhouette,
             R.drawable.dress,
-            R.drawable.gift,
+            R.drawable.truck,
             R.drawable.ebuzz,
             R.drawable.music,
+            R.drawable.ebuzz,
 
 
 
@@ -194,7 +202,7 @@ public class MainActivity extends BottomNavigtionViewActivity
     ImageButton GridImageButton;
   //  static DAL layer;
   public static InterstitialAd mInterstitialAd;
-
+    SliderLayout sliderLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,9 +219,11 @@ public class MainActivity extends BottomNavigtionViewActivity
 
         MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
         CustomGrid adapter = new CustomGrid(this, web, imageId);
-        grid=(GridView)findViewById(R.id.customgrid);
+        ExpandableHeightGridView grid=(ExpandableHeightGridView) findViewById(R.id.customgrid);
         grid.setAdapter(adapter);
-        grid.setFocusable(false);
+
+        grid.setExpanded(true);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -230,18 +240,55 @@ public class MainActivity extends BottomNavigtionViewActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+         sliderLayout = (SliderLayout)findViewById(R.id.slider);
 
 //        initializeConnection();
 
 
 
-        layer=new DAL(this,this);
+
         //layer.sliderDetail();
 
 
 
-        init();
+        for(int i=0 ; i<XMENArray.size() ; i++){
+
+            TextSliderView textSliderView = new TextSliderView(this);
+            textSliderView
+                    .image(XMENArray.get(i));
+
+            final int finalI = i;
+            textSliderView.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                @Override
+                public void onSliderClick(BaseSliderView slider) {
+             //  Toast.makeText(getApplicationContext(),XMENArray.get(finalI),Toast.LENGTH_SHORT).show();
+                    Intent mIntent = new Intent(MainActivity.this, Webview.class);
+
+                    mIntent.putExtra("brandUrl", DAL.sliderUrl.get(finalI));
+
+                    startActivity(mIntent);
+                }
+            });
+
+//            textSliderView
+//                    .description(name)
+//                    .image(Hash_file_maps.get(name))
+//                    .setScaleType(BaseSliderView.ScaleType.Fit)
+//                    .setOnSliderClickListener(this);
+//            textSliderView.bundle(new Bundle());
+
+//            textSliderView.getBundle()
+//                    .putString("extra",name);
+//
+ sliderLayout.addSlider(textSliderView);
+            currentImage=i;
+        }
+        sliderLayout.setPresetTransformer(SliderLayout.Transformer.Accordion);
+        sliderLayout.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);
+        sliderLayout.setCustomAnimation(new DescriptionAnimation());
+        sliderLayout.setDuration(3000);
+        sliderLayout.addOnPageChangeListener((ViewPagerEx.OnPageChangeListener) this);
+        //init();
 
         // layer.sliderDetail();
 
@@ -289,14 +336,12 @@ public class MainActivity extends BottomNavigtionViewActivity
     @Override
     public void onBackPressed() {
 
+CustomDialogClass customDialogClass=new CustomDialogClass(this);
+        customDialogClass.show();
 
-        SplashActivity.timer=0; // to open main activty direct when open again (not closed)
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+
+
+
         //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
 
     }
@@ -372,18 +417,19 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
 
-        } else if (id == R.id.nav_slideshow) {
-
-            Intent intent=new Intent(getApplicationContext(),TermsAndConditionActivity.class);
-            startActivity(intent);
-
-
-        } else if (id == R.id.nav_manage) {
-            Intent intent=new Intent(getApplicationContext(),PrivacyActivity.class);
-            startActivity(intent);
+//        } else if (id == R.id.nav_slideshow) {
+//
+//            Intent intent=new Intent(getApplicationContext(),TermsAndConditionActivity.class);
+//            startActivity(intent);
 
 
-        } else if (id == R.id.nav_share) {
+        }
+//        else if (id == R.id.nav_manage) {
+////            Intent intent=new Intent(getApplicationContext(),PrivacyActivity.class);
+//            startActivity(intent);
+
+
+         else if (id == R.id.nav_share) {
 //            Intent myIntent=new Intent(Intent.ACTION_SEND);
 //            myIntent.setType("Text/Plan");
 //            String shareBody="Your body here";
@@ -426,17 +472,24 @@ public class MainActivity extends BottomNavigtionViewActivity
 
         if(conn) {
             if (web[position] == "News") {
+
                 Intent intent = new Intent(this, NewsAndDealsActivity.class);
                 startActivity(intent);
 
-                overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+              //  overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 
 // for solving the proble after news click animation we should finish the main activity but come back to main actticty it will finish
 
 
 
-            } else {
+            }
+            else if(web[position] == "Deals"){
+                Intent intent = new Intent(this,DealsAndCouponsActivty.class);
+                startActivity(intent);
 
+            }
+            else {
+                layer=new DAL(this,this);
                 layer.searchProfile(web[position]);
 
 
@@ -457,12 +510,12 @@ public class MainActivity extends BottomNavigtionViewActivity
         final int[] currentPage = {0};
 
         final SliderAdapter[] sliderAdapter = {new SliderAdapter(MainActivity.this, XMENArray)};
-        mPager = (ViewPager) findViewById(R.id.pager);
+//        mPager = (ViewPager) findViewById(R.id.pager);
 
         mPager.setAdapter(sliderAdapter[0]);
         mPager.beginFakeDrag();
-        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
-        indicator.setViewPager(mPager);
+//        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+//        indicator.setViewPager(mPager);
 
         // Auto start of viewpager
         final Handler handler = new Handler();
@@ -592,18 +645,36 @@ public class MainActivity extends BottomNavigtionViewActivity
 
     }
 
+//    @Override
+//    protected void onStop() {
+//        sliderLayout.stopAutoCycle();
+//        super.onStop();
+//    }
 
     public void sliderImageClick(View view) {
 
 
-        Intent mIntent = new Intent(MainActivity.this, Webview.class);
 
-        mIntent.putExtra("brandUrl", DAL.sliderUrl.get(currentImage));
-
-        startActivity(mIntent);
     }
 
 
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
 
+    }
 
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
 }

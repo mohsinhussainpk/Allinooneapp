@@ -313,10 +313,14 @@ public class DAL  {
 
     public static void searchProfile(final String category) {
 //
+
         final ProgressDialog Dialog;
+        Log.i("DAL::context", String.valueOf(context));
         Dialog = new ProgressDialog(context);
         Dialog.setMessage("Loading...");
         Dialog.show();
+
+
         getBrandName=new ArrayList<String>();
         getBrandUrl=new ArrayList<String>();
         getImageUrl=new ArrayList<String>();
@@ -409,8 +413,7 @@ public class DAL  {
         int counter1=0;
 //        Dialog.show();
 
-        sliderImage=new ArrayList<String>();
-        sliderUrl=new ArrayList<String>();
+
 
 
         SplashActivity.table = SplashActivity.database.child("Slider Detail");
@@ -424,6 +427,9 @@ public class DAL  {
         SplashActivity.table.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
+                sliderImage=new ArrayList<String>();
+                sliderUrl=new ArrayList<String>();
                 for (DataSnapshot record : dataSnapshot.getChildren()) {
 
 

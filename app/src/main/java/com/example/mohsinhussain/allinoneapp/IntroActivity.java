@@ -63,7 +63,10 @@ public class IntroActivity extends Activity {
             layouts = new int[]{
                     R.layout.slide1_layout,
                     R.layout.slide2_layout,
-                    R.layout.slide3_layout};
+                    R.layout.slide3_layout,
+                    R.layout.slide4_layout
+
+            };
 
             // adding bottom dots
             addBottomDots(0);
@@ -92,7 +95,8 @@ public class IntroActivity extends Activity {
                 layouts = new int[]{
                         R.layout.slide1_layout,
                         R.layout.slide2_layout,
-                        R.layout.slide3_layout};
+                        R.layout.slide3_layout,
+                        R.layout.slide4_layout};
 
                 // adding bottom dots
                 addBottomDots(0);

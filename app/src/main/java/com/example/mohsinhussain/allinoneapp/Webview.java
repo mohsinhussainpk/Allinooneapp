@@ -48,7 +48,7 @@ public class Webview extends AppCompatActivity {
             browser.getSettings().getJavaScriptEnabled();
             browser.getSettings().setBuiltInZoomControls(true);
             browser.loadUrl(url);
-            browser.setWebViewClient(new webclient());
+//            browser.setWebViewClient(new webclient());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 // chromium, enable hardware acceleration
@@ -75,6 +75,7 @@ public class Webview extends AppCompatActivity {
 
 
             super.onBackPressed();
+
         if (MainActivity.mInterstitialAd.isLoaded()) {
             MainActivity.mInterstitialAd.show();
         }
@@ -86,27 +87,27 @@ public class Webview extends AppCompatActivity {
     }
 
 
-    public class webclient extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            // TODO Auto-generated method stub
-            view.loadUrl(url);
-            return true;
-        }
-
-        @Override
-        public void onPageStarted(WebView view, String url, Bitmap favicon) {
-            // TODO Auto-generated method stub
-            super.onPageStarted(view, url, favicon);
-        }
-
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            // TODO Auto-generated method stub
-            super.onPageFinished(view, url);
-            progressBar.setVisibility(View.GONE);
-        }
-            }
+//    public class webclient extends WebViewClient {
+//        @Override
+//        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+//            // TODO Auto-generated method stub
+//            view.loadUrl(url);
+//            return true;
+//        }
+//
+//        @Override
+//        public void onPageStarted(WebView view, String url, Bitmap favicon) {
+//            // TODO Auto-generated method stub
+//            super.onPageStarted(view, url, favicon);
+//        }
+//
+//        @Override
+//        public void onPageFinished(WebView view, String url) {
+//            // TODO Auto-generated method stub
+//            super.onPageFinished(view, url);
+//            progressBar.setVisibility(View.GONE);
+//        }
+//            }
 
     }
 
