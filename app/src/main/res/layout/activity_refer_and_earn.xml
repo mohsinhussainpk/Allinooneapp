@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.e.mohsinhussain.allinoneapp.ReferAndEarn">
+
+    <TextView
+        android:id="@+id/rstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:text="Rs : "
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/amountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+
+        android:layout_alignBaseline="@+id/rstext"
+        android:layout_alignBottom="@+id/rstext"
+        android:layout_toRightOf="@+id/rstext"
+        android:layout_toEndOf="@+id/rstext" />
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/referallayout"
+    android:layout_below="@+id/amountText"
+    >
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Referal link"
+
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/referallinktext"
+
+
+        />
+    <Button
+
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="copy"
+        android:id="@+id/referalcopybtn"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="313dp"
+        android:layout_marginStart="313dp">
+
+
+    </Button>
+
+
+    >
+
+</RelativeLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:id="@+id/shareapplayout"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/referallayout"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/refsharebutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share"
+
+
+
+
+            />
+
+
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="Reedem Reward"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/getreedembutton"
+
+        android:layout_below="@+id/shareapplayout" />
+</RelativeLayout>

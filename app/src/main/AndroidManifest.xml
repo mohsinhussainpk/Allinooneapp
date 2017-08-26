@@ -10,27 +10,25 @@
     <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <user-sdk
-        android:maxSdkVersion="23"
-        android:minSdkVersion="10"
-        android:targetSdkVersion="23" />
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/applogoupdated"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".IntroActivity"
             android:label="@string/app_name"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
-            <receiver
-                android:name=".CheckConnetivity"
-                android:exported="false" />
+
+            <!-- <receiver -->
+            <!-- android:name=".CheckConnetivity" -->
+            <!-- android:exported="false" /> -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,7 +58,34 @@
         </service>
 
         <activity android:name=".LiveTvActivity" />
-        <activity android:name=".GovermentServicesActivity"></activity>
+        <activity android:name=".GovermentServicesActivity" />
+
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="key_test_iisw7ZavcBaEQHOJmlMkDjobssfBTP9h" />
+
+        <receiver
+            android:name="io.branch.referral.InstallListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <intent-filter>
+            <data
+                android:host="open"
+                android:scheme="Allinone" />
+
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+        </intent-filter>
+
+        <activity android:name=".ReferAndEarn" />
+        <activity android:name=".NewsListViewActivity" />
+        <activity android:name=".VideoActivity"></activity>
     </application>
 
 </manifest>

@@ -53,7 +53,7 @@
             android:layout_centerHorizontal="true"
             ads:adSize="SMART_BANNER"
             android:layout_below="@+id/slider"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111" >
+            ads:adUnitId="ca-app-pub-7071387714574454/3728946128" >
 
         </com.google.android.gms.ads.AdView>
 
@@ -64,7 +64,7 @@
             android:verticalSpacing="0.5dp"
             android:background="#2B2E4A"
             android:gravity="center"
-            android:layout_below="@+id/adView"
+            android:layout_below="@+id/slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
 

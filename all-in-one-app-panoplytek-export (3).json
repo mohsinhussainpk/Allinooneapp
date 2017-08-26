@@ -1,0 +1,1046 @@
+{
+  "Brand Records" : {
+    "Baby and Kids" : {
+      "0ZUBAIDAS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/zubaidas.png?alt=media&token=0e013237-69cc-4774-bcce-8b2800834e97",
+        "Name" : "ZUBAIDAS",
+        "Url" : "http://zubaidasonline.com/"
+      },
+      "1BABY PLANET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/babyplanet.jpg?alt=media&token=95cb35fb-737f-451e-b85b-d898e8009504",
+        "Name" : "BABY PLANET",
+        "Url" : "https://www.babyplanet.pk/"
+      },
+      "2BABY WORLD" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/BabyWorld.jpg?alt=media&token=1809a94c-5f86-457b-acc3-41742edd24a6",
+        "Name" : "BABY WORLD",
+        "Url" : "http://babyworld.pk/"
+      }
+    },
+    "Car Maintenance" : {
+      "0AUTOGENIE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Autogenie.jpg?alt=media&token=452302a1-4328-4859-9100-66ef6193e016",
+        "Name" : "AUTO GENIE",
+        "Url" : "http://autogenie.pk/"
+      },
+      "1AUTOX" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/autox.jpg?alt=media&token=16b22421-7fd9-4b7b-a438-6071eee0c271",
+        "Name" : "AUTOX",
+        "Url" : "https://www.autox.pk/"
+      },
+      "2AUTOEXPERT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Autoexpert.jpg?alt=media&token=3c680563-276f-42f7-a20b-d6178f73160e",
+        "Name" : "AUTO EXPERT",
+        "Url" : "http://www.autoexpert.pk/"
+      }
+    },
+    "Classifieds" : {
+      "0OLX" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Olx.png?alt=media&token=6afa552c-f4a6-4e93-a0c7-41a1fcfba668",
+        "Name" : "OLX",
+        "Url" : "https://www.olx.com.pk/"
+      },
+      "1PAK WHEELS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/pakwheels.png?alt=media&token=ac38cf5e-163c-4cb3-a28e-3f2bf184bbe7",
+        "Name" : "PAK WHEELS",
+        "Url" : "https://www.pakwheels.com/"
+      },
+      "2Bolee" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Bolee.png?alt=media&token=36838138-1bb9-4444-b1d4-34b09079a2fa",
+        "Name" : "BOLEE.COM",
+        "Url" : " http://bolee.com/"
+      },
+      "3CARMUDI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Carmudi.png?alt=media&token=61bdd5d3-84a6-4f9b-9ffb-343446dd2053",
+        "Name" : "CARMUDI",
+        "Url" : "https://www.carmudi.pk/"
+      },
+      "4Adpost" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Adpost.png?alt=media&token=656d2cdc-b499-4a69-9c1e-690f15d26527",
+        "Name" : "ADPOST.PK",
+        "Url" : " http://adpost.pk/"
+      }
+    },
+    "Daily Deals" : {
+      "0DARAZ" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/0.jpg?alt=media&token=058741a8-140b-4eab-9443-edd35c2f2f0c",
+        "Name" : "DARAZ",
+        "Url" : "https://www.daraz.pk/deals-of-the-week/"
+      },
+      "10CARTPK" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Cartpk.png?alt=media&token=aadd91e2-ac88-4466-a1b5-1cceb6e77e7c",
+        "Name" : "CARTPK",
+        "Url" : "http://www.cartpk.com/sales-and-promtions"
+      },
+      "11SEHAT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sehat.png?alt=media&token=12bb48ba-6198-4458-ba05-6cdbb971a5a0",
+        "Name" : "SEHAT.COM",
+        "Url" : "https://sehat.com.pk/categories.php?category=Special-Discounts"
+      },
+      "12THE WARE HOUSE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/wearhouse.png?alt=media&token=eeb528fe-d05a-468e-96ec-d6d2682de8d4",
+        "Name" : "THE WEAR HOUSE",
+        "Url" : "http://www.thewarehouse.pk/clearance-sale"
+      },
+      "13SASTA TICKET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "SASTA TICKET",
+        "Url" : "https://www.sastaticket.pk/deals.aspx"
+      },
+      "1GOTO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/GOTO.png?alt=media&token=2bc95e28-daad-421c-8117-fe9a7e7514e0",
+        "Name" : "GOTO.COM",
+        "Url" : "https://www.goto.com.pk/deals-of-the-week"
+      },
+      "2SYMBIOS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/SYMBIOS.jpg?alt=media&token=b268a8e4-190b-4b1e-a167-cddbf374db95",
+        "Name" : "SYMBIOS.PK",
+        "Url" : "http://www.symbios.pk/clearance-sale"
+      },
+      "3HOMESHOPPING" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/homeshopping.jpg?alt=media&token=06d5c35c-efe8-4155-a55e-d23223b7390c",
+        "Name" : "HOMESHOPPING.PK",
+        "Url" : "https://homeshopping.pk/categories/Daily-Deals-In-Pakistan/"
+      },
+      "4HOMESHOPPING" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/homeshopping.jpg?alt=media&token=06d5c35c-efe8-4155-a55e-d23223b7390c",
+        "Name" : "HOMESHOPPING.PK",
+        "Url" : "https://homeshopping.pk/categories/Clearance-Sale/"
+      },
+      "5YAYVO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/2.jpg?alt=media&token=92915c94-080b-4f89-8591-f670aedd269f",
+        "Name" : "YAYVO",
+        "Url" : "http://yayvo.com/gadgets"
+      },
+      "6WELL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/well.pk.png?alt=media&token=db03e3cc-fd1c-4018-b44d-7389d38357d9",
+        "Name" : "WELL.PK",
+        "Url" : "https://well.pk/best-deals/"
+      },
+      "7URBAN GALLERIA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/urbangalleira.jpg?alt=media&token=a11ce0c6-644e-4eb4-8cf4-451f3c5204fb",
+        "Name" : "URBAN GALLERIA",
+        "Url" : "http://urbangalleria.com/sale.html"
+      },
+      "8HOID" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/hoid.png?alt=media&token=e1006a3f-e20b-4fbd-9a43-ffd306356b25",
+        "Name" : "HOID",
+        "Url" : "http://www.hoid.pk/Sale"
+      },
+      "9QNE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/qne.png?alt=media&token=6918afbc-2b90-4a51-8b61-41de40adbd88",
+        "Name" : "QNE",
+        "Url" : "https://www.qne.com.pk/offers.html"
+      }
+    },
+    "Deals and Coupons" : {
+      "CODES" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Codes.pk.png?alt=media&token=f706e168-de83-498e-bbdc-cb044298a815",
+        "Name" : "CODES.PK",
+        "Url" : "https://codes.pk/"
+      },
+      "PEEKABOO GURU" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Peekaboo-Guru.png?alt=media&token=a2a46894-94b2-4eab-bfbf-8fc87571a22e",
+        "Name" : "PEEKABOO GURU",
+        "Url" : "https://peekaboo.guru/"
+      }
+    },
+    "Delivery Services" : {
+      "0TCS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/TCS.jpg?alt=media&token=f743f79c-a2ed-4e98-8cd5-8405c1349093",
+        "Name" : "TCS",
+        "Url" : "http://www.tcscouriers.com"
+      },
+      "1LEOPARDS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/leopard-courier-service.png?alt=media&token=4d024f24-fedc-4c74-a653-e77617309b74",
+        "Name" : "LEOPARDS",
+        "Url" : "https://www.leopardscourier.com/"
+      },
+      "2DHL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/DHL.jpg?alt=media&token=6c914e51-84b7-4753-9690-00db04b8cbba",
+        "Name" : "DHL",
+        "Url" : "http://www.dhl.com.pk/"
+      },
+      "2PAKISTAN POST" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Pakistan-post.jpg?alt=media&token=c433b9ea-dd8c-41f3-9b3b-d0ec4d8b0680",
+        "Name" : "PAKISTAN POST",
+        "Url" : "https://www.pakpost.gov.pk/"
+      },
+      "3BLUE EX" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Blue-ex.png?alt=media&token=d80f1307-e50b-46d5-ab40-d5a8eb287a01",
+        "Name" : "BLUE EX",
+        "Url" : "http://blue-ex.com/"
+      },
+      "4FORRUN" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/forrun.png?alt=media&token=7a5ccef3-08b3-4ec3-be23-2266a4f91777",
+        "Name" : "FORRUN",
+        "Url" : "http://forrun.co/"
+      },
+      "5DELIVERY WALAY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Delivery-walay.png?alt=media&token=24644e21-9ffd-4bcc-8e38-c85d637fac86",
+        "Name" : "DELIVERY WALAY",
+        "Url" : " http://deliverywalay.com/"
+      }
+    },
+    "Domain and Hosting" : {
+      "0SASTA TICKET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "SASTA TICKET",
+        "Url" : "https://www.sastaticket.pk/"
+      },
+      "1TRIPADVISOR" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Tripadvisor.jpg?alt=media&token=b5a2ab1b-6b38-42ec-9ff3-1e07b93c8741",
+        "Name" : "TRIP ADVISOR",
+        "Url" : "https://www.tripadvisor.com/"
+      },
+      "2FINDMYADVENTURE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/findmyadventure.png?alt=media&token=559fb9a1-0703-400c-ad3e-4354a02aea36",
+        "Name" : "FINDMYADVENTURE",
+        "Url" : "https://www.findmyadventure.pk/"
+      }
+    },
+    "Education" : {
+      "0ILM KI DUNYA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/ilmkidunya.png?alt=media&token=84625434-b43a-4432-ad20-19fc767bdf9c",
+        "Name" : "ILM KI DUNYA",
+        "Url" : "https://www.ilmkidunya.com/"
+      },
+      "1COURSERA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Coursera.jpeg?alt=media&token=79bc0c98-7059-47e9-80d3-739be808840e",
+        "Name" : "COURSERA",
+        "Url" : "https://www.coursera.org//"
+      },
+      "2NEARPEER" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/nearpeer.png?alt=media&token=85267270-27b4-49b4-8781-5311d108f676",
+        "Name" : "NEARPEER",
+        "Url" : "https://www.nearpeer.org/"
+      },
+      "3KHANACADEMY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Khanacademy.png?alt=media&token=97406df3-f014-42b0-b8a5-8277168d5c02",
+        "Name" : "KHAN ACADEMY",
+        "Url" : "https://www.khanacademy.org/"
+      },
+      "4UNIPEDIA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/unipedia.png?alt=media&token=e2f680d7-81e2-4bf7-9156-778aed161156",
+        "Name" : "UNIPEDIA",
+        "Url" : "https://theunipedia.com/"
+      },
+      "5EDX" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Edx.jpeg?alt=media&token=040c03b6-f1b2-440b-8110-4f48fb7cdaff",
+        "Name" : "EDX",
+        "Url" : "https://www.edx.org/"
+      },
+      "6DAAKHLA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Daewoo%20cab.png?alt=media&token=2e1b0604-3510-4e42-acce-0845f74bce50",
+        "Name" : "DAAKHLA",
+        "Url" : "https://daakhla.pk/"
+      },
+      "6UDACITY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Udacity.jpg?alt=media&token=d0434bd6-fe08-4e26-a33b-5cfbf4125e92",
+        "Name" : "UDACITY",
+        "Url" : "https://www.udacity.com/"
+      }
+    },
+    "Electricity Bill" : {
+      "Faisalabad" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/FESCO.png?alt=media&token=881fe278-54eb-4d85-9e2d-fa124bff1198",
+        "Name" : "Faisalabad",
+        "Url" : "http://210.56.23.106:888/fescobill/"
+      },
+      "Gujranwala" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/GEPCO.png?alt=media&token=e6c29741-aef5-47da-bf31-841dc4316134",
+        "Name" : "Gujranwala",
+        "Url" : "http://210.56.23.106:888/gepcobill/"
+      },
+      "Hyderabad" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/HESCO.png?alt=media&token=53558b46-9a9e-4301-84b4-7472fdc48078",
+        "Name" : "Hyderabad",
+        "Url" : "http://210.56.23.106:888/hescobill/"
+      },
+      "Islamabad" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/iesco-logo.png?alt=media&token=fed626c5-c75a-4ce3-bb5c-63abd6806658",
+        "Name" : "Islamabad",
+        "Url" : "http://210.56.23.106:888/iescobill/"
+      },
+      "Karachi" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/K%20Electric.png?alt=media&token=7fe7f261-8b3c-4643-b910-40dba95d29b1",
+        "Name" : "Karachi",
+        "Url" : "http://www.ke.com.pk/complaints-services/duplicate-bill/"
+      },
+      "Lahore" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/LESCO.gif?alt=media&token=89931676-cf9b-4a67-987d-66a3fb1b15e7",
+        "Name" : "Lahore",
+        "Url" : "http://lesco.gov.pk/Modules/CustomerBill/CheckBill.asp"
+      },
+      "Multan" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/MEPCO.jpg?alt=media&token=d0004a84-f882-4904-aa86-9af89e9e661b",
+        "Name" : "Multan",
+        "Url" : "http://210.56.23.106:888/mepcobill/"
+      },
+      "Peshawar" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/PESCO.JPG?alt=media&token=dba5ec7e-89a2-4e07-a046-3f98f39f162c",
+        "Name" : "Peshawar",
+        "Url" : "http://210.56.23.106:888/pescobill/"
+      },
+      "Sukkur" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/Dhaitsu.png?alt=media&token=4681755b-37b2-4e54-9390-aab11877c836",
+        "Name" : "Sukkur",
+        "Url" : "http://210.56.23.106:888/sepcobill/"
+      }
+    },
+    "English News" : {
+      "0DAWN" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/dawn_news.png?alt=media&token=b367bbb7-e4dc-4ec8-8026-9baa5f33a6e6",
+        "Name" : "DAWN",
+        "Url" : "https://www.dawn.com/"
+      },
+      "1EXPRESS TRIBUNE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Express%20tribune.jpg?alt=media&token=e7c9c320-d795-41d8-a947-e0435dfa4911",
+        "Name" : "EXPRESS TRIBUNE",
+        "Url" : "https://www.express.com.pk/"
+      },
+      "2DUNYANEWS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Dunya.jpg?alt=media&token=30211182-6481-4c1c-8e0a-8f2299e0d923",
+        "Name" : "DUNYA NEWS",
+        "Url" : "http://dunyanews.tv/"
+      },
+      "3GEO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Geonews.png?alt=media&token=8ae971c2-4dd3-4b8c-9db8-b340f1ccee43",
+        "Name" : "GEO NEWS",
+        "Url" : "https://www.geo.tv/"
+      },
+      "4ARYNEWS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/ARY.jpg?alt=media&token=11ba8349-3e60-40a5-8617-5b1a42f86415",
+        "Name" : "ARY NEWS",
+        "Url" : "http://live.arynews.tv/"
+      },
+      "5SAMAA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Samaa.jpg?alt=media&token=78f04dc3-993d-472c-89f7-181f8e2ac6fd",
+        "Name" : "SAMAA NEWS",
+        "Url" : "https://www.samaa.tv/live/"
+      },
+      "6NEWSHD" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/92-News-HD.png?alt=media&token=451e97af-1abc-4f10-89e4-a15a0c3ac2bc",
+        "Name" : "92 NEWS",
+        "Url" : "http://92newshd.tv/live/"
+      },
+      "7NEWSONE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/News-one.jpg?alt=media&token=614373ee-27ad-458e-a290-4e3e9dcebc89",
+        "Name" : "NEWS ONE",
+        "Url" : "https://www.newsone.tv/"
+      }
+    },
+    "Entertainment" : {
+      "0PARHLO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/parhlo.png?alt=media&token=c4ec58f9-58f5-4789-9cbb-bfb6d5f0c319",
+        "Name" : "PARHLO",
+        "Url" : "https://www.parhlo.com/"
+      },
+      "1MANGO BAZZ" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/mangobaaz.jpg?alt=media&token=c83e0ef3-1039-44ab-81d2-cb106bc0e74d",
+        "Name" : "MANGO BAZZ",
+        "Url" : "https://www.mangobaaz.com/"
+      },
+      "2BRANDSYNARIO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Brandsnayrio.png?alt=media&token=f362afd5-860f-42bd-9411-fc5b1e2680dc",
+        "Name" : "BRANDSYNARIO",
+        "Url" : "http://www.brandsynario.com/"
+      }
+    },
+    "Finance" : {
+      "INVESTORS LOUNGE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/investorlounge.png?alt=media&token=af6715c8-5d3e-4bf9-9294-a7eaa48133ed",
+        "Name" : "INVESTORS LOUNGE",
+        "Url" : "https://www.investorslounge.com/"
+      }
+    },
+    "Food" : {
+      "0FOODPANDA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/foodpanda.png?alt=media&token=b834dc25-d565-4651-a114-bde5e91a9bc2",
+        "Name" : "FOODPANDA",
+        "Url" : "https://play.google.com/store/apps/details?id=com.global.foodpanda.android&hl=en"
+      },
+      "1MCDONALDS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Mcdonalds.png?alt=media&token=20dee07a-0139-486d-b58c-9c46f3591784",
+        "Name" : "McDONALD'S",
+        "Url" : "https://www.mcdonalds.com.pk/"
+      },
+      "2PIZZAHUT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Pizza%20hut.jpg?alt=media&token=45aa7339-62e2-4bee-806e-4113dae84500",
+        "Name" : "PIZZA HUT",
+        "Url" : "https://www.pizzahut.com.pk"
+      },
+      "3KFC" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/KFC.png?alt=media&token=834db956-ab77-4d16-a6dd-654580bbf619",
+        "Name" : "KFC",
+        "Url" : "https://kfcpakistan.com/"
+      }
+    },
+    "Freelancing" : {
+      "0SASTA TICKET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "SASTA TICKET",
+        "Url" : "https://www.sastaticket.pk/"
+      },
+      "1TRIPADVISOR" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Tripadvisor.jpg?alt=media&token=b5a2ab1b-6b38-42ec-9ff3-1e07b93c8741",
+        "Name" : "TRIP ADVISOR",
+        "Url" : "https://www.tripadvisor.com/"
+      },
+      "2FINDMYADVENTURE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/findmyadventure.png?alt=media&token=559fb9a1-0703-400c-ad3e-4354a02aea36",
+        "Name" : "FINDMYADVENTURE",
+        "Url" : "https://www.findmyadventure.pk/"
+      }
+    },
+    "Furniture" : {
+      "0URBAN GALLERIA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/urbangalleira.jpg?alt=media&token=a11ce0c6-644e-4eb4-8cf4-451f3c5204fb",
+        "Name" : "URBAN GALLERIA",
+        "Url" : "http://urbangalleria.com/"
+      },
+      "1HOID" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/hoid.png?alt=media&token=e1006a3f-e20b-4fbd-9a43-ffd306356b25",
+        "Name" : "HOID",
+        "Url" : "http://www.hoid.pk/"
+      }
+    },
+    "Games" : {
+      "Jetpack master" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "jetpack master",
+        "Url" : "http://play.famobi.com/jetpack-master#_ga=2.268118669.2065400806.1502977513-1283969035.1502834348"
+      },
+      "colorswitch" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "Color Switch",
+        "Url" : "http://poki.com/en/g/color-switch"
+      },
+      "frankyvaletparking" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/findmyadventure.png?alt=media&token=559fb9a1-0703-400c-ad3e-4354a02aea36",
+        "Name" : "Franky Valet Parking",
+        "Url" : "http://poki.com/en/g/jake-and-finn-s-candy-dive"
+      },
+      "fruitacrush" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "Fruita Crush",
+        "Url" : "http://play.famobi.com/fruita-crush#_ga=2.268027533.2065400806.1502977513-1283969035.1502834348"
+      },
+      "twenty" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "2048",
+        "Url" : "http://poki.com/en/g/2048"
+      }
+    },
+    "Gas Bill" : {
+      "SNGPL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/SNGPL.jpg?alt=media&token=9ecfb928-a3e2-41d7-9d9d-f748dc3c7332",
+        "Name" : "SNGPL",
+        "Url" : "http://www.sngpl.com.pk/web/login.jsp?mdids=85"
+      },
+      "SSGC" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/SSGC.jpg?alt=media&token=082b417d-f396-48a5-81e3-584d8730c7e7",
+        "Name" : "SSGC",
+        "Url" : "http://viewbill.ssgc.com.pk/web/"
+      }
+    },
+    "Gifts and Flowers" : {
+      "0TOHFAY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/tohfay.png?alt=media&token=babccfe7-fa2e-4fb0-b7a0-6fa8d9af3003",
+        "Name" : "TOHFAY",
+        "Url" : "https://www.tohfay.com/"
+      },
+      "1SENTIMENTS EXPRESS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sentimentexpress.png?alt=media&token=f02974f2-967d-4253-bc38-f5f5afbd9024",
+        "Name" : "SENTIMENTS EXPRESS",
+        "Url" : "http://sentimentsexpress.com/"
+      },
+      "2EXPRESS GIFT SERVICE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Express%20gifts.jpg?alt=media&token=5095b1fa-5f5e-4606-a3ef-9dd37dbd1620",
+        "Name" : "EXPRESS GIFT SERVICE",
+        "Url" : "http://www.expressgiftservice.com/"
+      }
+    },
+    "Grocery" : {
+      "0TAZAMART" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Tazamart.png?alt=media&token=3ed2f60e-9875-407a-84fc-f17bb549eb23",
+        "Name" : "TAZAMART",
+        "Url" : "https://tazamart.pk/"
+      },
+      "1QNE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/qne.png?alt=media&token=6918afbc-2b90-4a51-8b61-41de40adbd88",
+        "Name" : "QNE",
+        "Url" : "https://www.qne.com.pk/"
+      },
+      "2GOMART" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Gomart.jpeg?alt=media&token=cd8720b5-4078-404b-ab3f-5dff19e5e760",
+        "Name" : "GOMART",
+        "Url" : "https://www.gomart.com/"
+      },
+      "3CARTPK" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/cartpk-com_163_001.png?alt=media&token=8c683f5a-8d97-464f-8bd9-160e77d71305",
+        "Name" : "CARTPK",
+        "Url" : "http://www.cartpk.com/"
+      },
+      "4SEVEN" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/24Seven.jpg?alt=media&token=e49c7d44-3d84-4e45-9558-195e42e92eee",
+        "Name" : "24SEVEN",
+        "Url" : "https://24seven.pk/"
+      },
+      "5MANDI EXPRESS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Mandiexpress.png?alt=media&token=40e6e499-8bf6-4988-a007-d700cd4fbdec",
+        "Name" : "MANDI EXPRESS",
+        "Url" : "http://www.mandiexpress.pk/"
+      }
+    },
+    "Health" : {
+      "0SEHAT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sehat.png?alt=media&token=12bb48ba-6198-4458-ba05-6cdbb971a5a0",
+        "Name" : "SEHAT.COM",
+        "Url" : "https://sehat.com.pk/"
+      },
+      "1MARHAM" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/marham.png?alt=media&token=b8499e5a-943a-4c5f-92b7-429de7f3acdf",
+        "Name" : "MARHAM",
+        "Url" : "https://www.marham.pk/"
+      },
+      "2DAWAAI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/dawaai.png?alt=media&token=89bdfcf4-6d5a-4d6f-b78f-8644c5857f45",
+        "Name" : "DAWAAI",
+        "Url" : "http://dawaai.pk/"
+      },
+      "3PHARMAPEDIA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Pharmapedia-Pak.jpg?alt=media&token=64cf4e7c-19b4-4332-a78f-e335ec3066a1",
+        "Name" : "PHARMAPEDIA PAKISTAN",
+        "Url" : "https://play.google.com/store/apps/details?id=com.binops.pharma.pk"
+      },
+      "4MYDOCTOR" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/My-doctor.png?alt=media&token=68a3796b-ee9b-4cd7-9760-e96ecda7d46d",
+        "Name" : "MY DOCTOR",
+        "Url" : "https://mydoctor.pk/"
+      },
+      "5MEDONLINE PK" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Medonline.png?alt=media&token=79cc69cd-78a4-4100-bb22-100d2f684a56",
+        "Name" : "MEDONLINE.PK",
+        "Url" : "http://medonline.pk/"
+      }
+    },
+    "Home Service" : {
+      "SUKOON" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sukoon.png?alt=media&token=6b2ef5c7-9633-4fe1-b218-d52789a3c207",
+        "Name" : "SUKOON",
+        "Url" : "https://www.sukoon.com.pk/"
+      }
+    },
+    "Jobs" : {
+      "0ROZEE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Rozee.jpg?alt=media&token=f788f485-7138-497a-828a-314d3759b48b",
+        "Name" : "ROZEE",
+        "Url" : "https://www.rozee.pk/"
+      },
+      "1JOBS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Jobs.png?alt=media&token=f623aad9-29d6-42d9-ad6e-2866d641bbf6",
+        "Name" : "JOBS.COM",
+        "Url" : "https://jobs.com.pk/"
+      },
+      "2MUSTAQBIL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Mustakbil.png?alt=media&token=76be60e6-2e03-475e-814e-99c3bb028331",
+        "Name" : "MUSTAQBIL",
+        "Url" : "https://www.mustakbil.com/"
+      },
+      "3RIGHTJOBS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/RightJobs.pk.png?alt=media&token=9e3f6aca-d5f2-40f6-be64-5030b318b730",
+        "Name" : "RIGHTJOBS.PK",
+        "Url" : "https://rightjobs.pk/"
+      },
+      "4BAYROZGAR" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Bayrozgar.jpg?alt=media&token=ea61831a-8752-462b-83d7-f296f324d36e",
+        "Name" : "BAYROZGAR.COM",
+        "Url" : "http://www.bayrozgar.com/"
+      }
+    },
+    "Legal" : {
+      "WUKLA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Wukla.png?alt=media&token=7fa99147-e1e7-4df4-a5e3-2d16a8c9819a",
+        "Name" : "WUKLA",
+        "Url" : "http://wukla.com/"
+      }
+    },
+    "Live TV" : {
+      "BOL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/findmyadventure.png?alt=media&token=559fb9a1-0703-400c-ad3e-4354a02aea36",
+        "Name" : "BOl News",
+        "Url" : "3WFoHeLRhDk"
+      },
+      "DawnNews" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/dawn_news.png?alt=media&token=b367bbb7-e4dc-4ec8-8026-9baa5f33a6e6",
+        "Name" : "Dawn News",
+        "Url" : "fKk9Qr9IYtQ"
+      },
+      "ExpressNews" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Express.jpg?alt=media&token=67c10ed1-0e89-4922-bc40-7b68dd4744e2",
+        "Name" : "Express News",
+        "Url" : "VHB_ERzn1V8"
+      },
+      "Geo" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Geonews.png?alt=media&token=8ae971c2-4dd3-4b8c-9db8-b340f1ccee43",
+        "Name" : "Geo News",
+        "Url" : "wZmPkzcJJ1k"
+      },
+      "NeoNews" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Neo.png?alt=media&token=122b1834-497a-428f-aab7-3130fbd1167f",
+        "Name" : "Neo News",
+        "Url" : "qoqTaFqpPpA"
+      },
+      "Samaa" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Samaa.jpg?alt=media&token=78f04dc3-993d-472c-89f7-181f8e2ac6fd",
+        "Name" : "Samaa News",
+        "Url" : "Wyq6YeoM2ZA"
+      },
+      "ninetytwoNews" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/92-News-HD.png?alt=media&token=451e97af-1abc-4f10-89e4-a15a0c3ac2bc",
+        "Name" : "92 News",
+        "Url" : "X7leuMEL1_o"
+      }
+    },
+    "More" : {
+      "CPLC" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/CPLC.jpg?alt=media&token=89bd26fb-d528-49ec-856c-01540ab234cf",
+        "Name" : "CPLC",
+        "Url" : "http://www.cplc.org.pk/"
+      },
+      "PTCL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/PTCL.png?alt=media&token=1bfc32c3-694a-4817-9976-7118042adaed",
+        "Name" : "PTCL",
+        "Url" : "https://dbill.ptcl.net.pk/PTCLSearchInvoice.aspx"
+      },
+      "Sim Ownership" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/sim-card.png?alt=media&token=1655f223-d399-47b2-bff7-5c7b2368dedf",
+        "Name" : "Sim Ownership",
+        "Url" : "https://cnic.sims.pk/"
+      }
+    },
+    "Music" : {
+      "0TAAZI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Taazi-Logo.png?alt=media&token=b2bdb469-b7e5-47cc-9c4b-25ac1efb18ae",
+        "Name" : "TAAZI",
+        "Url" : "http://taazi.com/"
+      },
+      "1PATARI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/patari.png?alt=media&token=063e56a0-3dce-40fe-9a9b-a9df4b00b8db",
+        "Name" : "PATARI",
+        "Url" : "http://patari.pk/home/new/"
+      }
+    },
+    "Payments" : {
+      "0EASYPAY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Easypaisa.png?alt=media&token=c570e4ca-e016-4812-af7c-35431e907ab7",
+        "Name" : "EASY PAY",
+        "Url" : "https://play.google.com/store/apps/details?id=pk.com.telenor.phoenix&hl=en"
+      },
+      "1JAZZCASH" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/jazzcash-logo-200x200.png?alt=media&token=e2e486ac-ebee-4f33-8941-f642ee642577",
+        "Name" : "JAZZ CASH",
+        "Url" : "https://play.google.com/store/apps/details?id=com.techlogix.mobilinkcustomer&hl=en"
+      },
+      "2SIMSIM" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/simsim.png?alt=media&token=9ff8ae29-b2f5-4afc-8428-b60d07d094af",
+        "Name" : "SIMSIM",
+        "Url" : "https://play.google.com/store/apps/details?id=com.finja.simsim&hl=en"
+      },
+      "3PAYONEER" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Payoneer.png?alt=media&token=454280b2-217a-4c2e-b5d4-86b960e5cf7a",
+        "Name" : "PAYONEER",
+        "Url" : "https://www.payoneer.com/"
+      },
+      "4FONEPAY" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/fonepay.png?alt=media&token=2ea469a7-55f6-4b3e-ae03-60deb62f539e",
+        "Name" : "FONEPAY",
+        "Url" : "https://play.google.com/store/apps/details?id=com.inov8.fonepayconsumer&hl=en"
+      }
+    },
+    "Price Comparison" : {
+      "0PRICEOYE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Priceoye.jpg?alt=media&token=4b750920-5936-4d5f-9bed-18331a6f2c04",
+        "Name" : "PRICE OYE",
+        "Url" : "https://priceoye.pk/"
+      },
+      "0SMART CHOICE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Smartchoice.png?alt=media&token=754c1b2d-9c5f-44b3-895f-bf0def3dd83c",
+        "Name" : "SMART CHOICE",
+        "Url" : "https://smartchoice.pk/"
+      },
+      "1KARLO COMPARE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Karlo.jpg?alt=media&token=66969cdd-ed1e-4e36-8a1f-bebda9eb4554",
+        "Name" : "KARLO COMPARE",
+        "Url" : "https://www.karlocompare.com.pk/"
+      },
+      "2JUST PRICE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Just-Price.png?alt=media&token=764f4695-718f-486f-9e37-17f1400c46ad",
+        "Name" : "JUST PRICE",
+        "Url" : "https://www.justprice.pk/"
+      }
+    },
+    "Printing" : {
+      "0THE WARE HOUSE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/wearhouse.png?alt=media&token=eeb528fe-d05a-468e-96ec-d6d2682de8d4",
+        "Name" : "THE WEAR HOUSE",
+        "Url" : "http://www.thewarehouse.pk/"
+      },
+      "1DEXPEL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Dexpel.png?alt=media&token=99586935-7545-4ca4-8b26-12ad6b990de0",
+        "Name" : "DEXPEL",
+        "Url" : "http://www.dexpel.com/"
+      },
+      "2INSTAPRINT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Instaprint.png?alt=media&token=e1d57f4c-f104-4ab5-afa3-71cb07b1c19a",
+        "Name" : "INSTAPRINT",
+        "Url" : " http://www.instaprint.pk/"
+      },
+      "3PRINTSHRINT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Printshrint.png?alt=media&token=fdedbad0-4adf-4287-bbfe-ae92d21e5577",
+        "Name" : "PRINTSHRINT",
+        "Url" : "https://www.printshrint.com/"
+      }
+    },
+    "Real State" : {
+      "0ZAMEEN" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/zameen.jpg?alt=media&token=45ff5763-7e53-4084-aae5-448577ed8821",
+        "Name" : "ZAMEEN",
+        "Url" : "https://www.zameen.com/"
+      },
+      "1LAMUDI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/lamudi.jpg?alt=media&token=cf669f8f-8d85-4e8e-887a-7a4f2aa3881e",
+        "Name" : "LAMUDI",
+        "Url" : "http://www.lamudi.pk/"
+      }
+    },
+    "Records" : [ {
+      "Category" : "shopping",
+      "Imgid" : "R.drawable.daraz",
+      "Name" : "DARAZ",
+      "Url" : "https://www.daraz.pk"
+    }, {
+      "Category" : "shopping",
+      "Imgid" : "R.drawable.yayvo",
+      "Name" : "YAYVO",
+      "Url" : "http://yayvo.com"
+    }, {
+      "Category" : "shopping",
+      "Imgid" : "R.drawable.yayvo",
+      "Name" : "KEYMU",
+      "Url" : "http://yayvo.com"
+    }, {
+      "Category" : "shopping",
+      "Imgid" : "R.drawable.yayvo",
+      "Name" : "goshop",
+      "Url" : "http://yayvo.com"
+    } ],
+    "Shopping" : {
+      "0DARAZ" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Daraz.png?alt=media&token=02af070e-b1ba-4801-9d86-69d98ef692fd",
+        "Name" : "DARAZ",
+        "Url" : "https://www.daraz.pk"
+      },
+      "1HOMESHOPPING" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/homeshopping.jpg?alt=media&token=06d5c35c-efe8-4155-a55e-d23223b7390c",
+        "Name" : "HOMESHOPPING.PK",
+        "Url" : "https://homeshopping.pk/"
+      },
+      "2YAYVO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/2.jpg?alt=media&token=92915c94-080b-4f89-8591-f670aedd269f",
+        "Name" : "YAYVO",
+        "Url" : "http://yayvo.com"
+      },
+      "3GOTO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/GOTO.png?alt=media&token=2bc95e28-daad-421c-8117-fe9a7e7514e0",
+        "Name" : "GOTO.COM",
+        "Url" : "https://www.goto.com.pk/"
+      },
+      "4ALIEXPRESS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/ali%20express.png?alt=media&token=9acaa430-23f7-4e36-93af-08e7a3a2b579",
+        "Name" : "ALIEXPRESS.COM",
+        "Url" : "https://www.aliexpress.com/"
+      },
+      "5WELL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Well.jpg?alt=media&token=a8aa37c4-b1f6-47ba-9959-a5de5e6d4d6e",
+        "Name" : "WELL.PK",
+        "Url" : "https://well.pk/"
+      },
+      "6BANGGOOD" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/BANG%20GOOD.png?alt=media&token=9aa5611a-6b7e-473d-89d5-450d1ab795c7",
+        "Name" : "BANGGOOD.COM",
+        "Url" : "https://www.banggood.com/"
+      },
+      "7DHGATE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/DH%20gate.jpg?alt=media&token=964454a5-05e8-4d8f-8fb4-f112f55de61b",
+        "Name" : "DHGATE.COM",
+        "Url" : "https://www.dhgate.com/"
+      }
+    },
+    "Slider Detail" : {
+      "0DARAZ" : {
+        "Imgid" : "http://www.militarymovers.co/wp-content/uploads/2017/01/discount-1.png",
+        "Name" : "DARAZ",
+        "Url" : "https://www.daraz.pk"
+      },
+      "1HOMESHOPPING" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/homeshopping.jpg?alt=media&token=06d5c35c-efe8-4155-a55e-d23223b7390c",
+        "Name" : "HOMESHOPPING.PK",
+        "Url" : "https://homeshopping.pk/"
+      },
+      "2YAYVO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/2.jpg?alt=media&token=92915c94-080b-4f89-8591-f670aedd269f",
+        "Name" : "YAYVO",
+        "Url" : "http://yayvo.com"
+      },
+      "3GOTO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/GOTO.png?alt=media&token=2bc95e28-daad-421c-8117-fe9a7e7514e0",
+        "Name" : "GOTO.COM",
+        "Url" : "https://www.goto.com.pk/"
+      },
+      "4WELL" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/well.pk.png?alt=media&token=db03e3cc-fd1c-4018-b44d-7389d38357d9",
+        "Name" : "WELL.PK",
+        "Url" : "https://well.pk/"
+      },
+      "5JAMBO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/1449576389-24-online-shopping-in-pakistan-jambo-pk.jpg?alt=media&token=81c92bd0-4a4f-4097-911a-f8e910d451d8",
+        "Name" : "JAMBO.PK",
+        "Url" : "http://www.jambo.pk/"
+      },
+      "6SHEOPS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sheops.png?alt=media&token=85eb9e63-c4d9-48c8-a85f-cc8eb02aba0b",
+        "Name" : "SHEOPS",
+        "Url" : "http://www.sheops.com/"
+      }
+    },
+    "Taxi" : {
+      "0UBER" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Uber.png?alt=media&token=a9946301-7ffc-4f0c-a7d4-aa89d209114ds",
+        "Name" : "UBER",
+        "Url" : "https://play.google.com/store/apps/details?id=com.ubercab&hl=en"
+      },
+      "1CAREEM" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Careem.png?alt=media&token=e32a2b54-4ff3-478a-b96c-f0cccd396c03",
+        "Name" : "CAREEM",
+        "Url" : "https://play.google.com/store/apps/details?id=com.careem.acma&hl=en"
+      },
+      "2DAEWOO CAB" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Daewoo%20cab.png?alt=media&token=2e1b0604-3510-4e42-acce-0845f74bce50",
+        "Name" : "DAEWOO CAB",
+        "Url" : "http://daewoocab.com.pk/"
+      },
+      "3BYKEA" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Bykea.png?alt=media&token=4702324d-61dd-433e-9911-a3d88ac91156",
+        "Name" : "BYKEA",
+        "Url" : "https://play.google.com/store/apps/details?id=com.bykea.pk&hl=en"
+      },
+      "3PAXI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/paxi.png?alt=media&token=c411452a-1d12-42e4-9f84-6692f2f6f127",
+        "Name" : "PAXI",
+        "Url" : "https://play.google.com/store/apps/details?id=com.pinktaxi"
+      }
+    },
+    "Tech News" : {
+      "0PRO PAKISTANI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/propakistan.png?alt=media&token=ba191eee-ed05-487f-8646-85dbdc6c2961",
+        "Name" : "PRO PAKISTANI",
+        "Url" : "https://propakistani.pk/"
+      },
+      "1THEVERGE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Theverge.png?alt=media&token=d290536a-41f1-4f6e-a136-742df12779c7",
+        "Name" : "THE VERGE",
+        "Url" : "https://www.theverge.com/"
+      },
+      "2TECH JUICE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/techjuice.png?alt=media&token=6f7721c0-97e3-4021-8c97-8ccc38ed773b",
+        "Name" : "TECH JUICE",
+        "Url" : "https://www.techjuice.pk/"
+      },
+      "3ENGADGET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/engadget.png?alt=media&token=c8640d7b-7a32-444a-a333-5a3671f7d51e",
+        "Name" : "ENGADGET",
+        "Url" : "https://www.engadget.com"
+      },
+      "4TECH COM" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/The-Tech.png?alt=media&token=42f13941-4bf4-4b41-aa3b-d1e65827ab13",
+        "Name" : "TECH.COM",
+        "Url" : "https://www.tech.com.pk/"
+      },
+      "5TECHCRUNCH" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Techcrunch.jpg?alt=media&token=920f4936-5b63-43f7-b747-818ac46185eb",
+        "Name" : "TECHCRUNCH",
+        "Url" : "https://techcrunch.com/"
+      },
+      "6PAKWIRED" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/pakwired.png?alt=media&token=6d614a8a-6628-415d-8f92-e579a1675336",
+        "Name" : "PAK WIRED",
+        "Url" : "https://pakwired.com/"
+      },
+      "7WIRED" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/wired%20logo.gif?alt=media&token=75f1a2cc-8537-48b8-987a-29eeb584053f",
+        "Name" : "WIRED",
+        "Url" : "https://www.wired.com/"
+      }
+    },
+    "Tickets" : {
+      "0CINIPAX" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Cinepax.png?alt=media&token=158e5455-0d88-4d5b-9e29-187550433cdf",
+        "Name" : "CINIPAX",
+        "Url" : "http://www.cinepax.com/"
+      },
+      "1EASYTICKETS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/easyTicket.jpeg?alt=media&token=6f6795be-2163-482a-8941-a1d0bc2358c6",
+        "Name" : "EASYTICKETS",
+        "Url" : "https://www.easytickets.pk/"
+      },
+      "2BOOKME" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/bookme.pk.png?alt=media&token=766d5003-53b5-4c8b-85db-39084313b887",
+        "Name" : "BOOKME",
+        "Url" : "https://bookme.pk/"
+      }
+    },
+    "Travel" : {
+      "0SASTA TICKET" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sastaticket.png?alt=media&token=3eda8590-3af0-4cad-a1bb-21593c681425",
+        "Name" : "SASTA TICKET",
+        "Url" : "https://www.sastaticket.pk/"
+      },
+      "1TRIPADVISOR" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Tripadvisor.jpg?alt=media&token=b5a2ab1b-6b38-42ec-9ff3-1e07b93c8741",
+        "Name" : "TRIP ADVISOR",
+        "Url" : "https://www.tripadvisor.com/"
+      },
+      "2FINDMYADVENTURE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/findmyadventure.png?alt=media&token=559fb9a1-0703-400c-ad3e-4354a02aea36",
+        "Name" : "FINDMYADVENTURE",
+        "Url" : "https://www.findmyadventure.pk/"
+      }
+    },
+    "Urdu News" : {
+      "0URDU POINT" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Urdupoint.jpg?alt=media&token=36fe9a1b-2d81-4213-bde2-62a65cd8c369",
+        "Name" : "URDU POINT",
+        "Src" : "Dawn.pk",
+        "Url" : "https://www.urdupoint.com/"
+      },
+      "1DAILY PAKISTAN" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/DailyPakistan.png?alt=media&token=42549279-db4d-4a93-af43-f9977c48af34",
+        "Name" : "DAILY PAKISTAN",
+        "Src" : "Dawn.pk",
+        "Url" : " http://dailypakistan.com.pk/"
+      },
+      "2EXPRESS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Express.jpg?alt=media&token=67c10ed1-0e89-4922-bc40-7b68dd4744e2",
+        "Name" : "EXPRESS",
+        "Src" : "Dawn.pk",
+        "Url" : "https://www.express.pk/"
+      },
+      "3JAVEDCH" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Javedch.png?alt=media&token=78ec4571-d3c0-4e63-8835-2c2c3abc912e",
+        "Name" : "JAVED CHAUDHRY",
+        "Src" : "Dawn.pk",
+        "Url" : "http://javedch.com/"
+      },
+      "4JANG" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Jang.png?alt=media&token=a1edaaec-147f-4939-9ca0-7f06c39c179f",
+        "Name" : "JANG",
+        "Src" : "Dawn.pk",
+        "Url" : "https://jang.com.pk/"
+      },
+      "5NEONETWORK" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Neo.png?alt=media&token=122b1834-497a-428f-aab7-3130fbd1167f",
+        "Name" : "NEO NETWORK",
+        "Src" : "Dawn.pk",
+        "Url" : "http://www.neonetwork.pk"
+      }
+    },
+    "Vehicle Verification" : {
+      "Islamabad" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/Islamabad.PNG?alt=media&token=c32eaad6-a90d-4cb9-9bfd-f65dc27d2890",
+        "Name" : "Islamabad",
+        "Url" : "http://islamabadexcise.gov.pk/VEH_REG/VEH_QUERY.asp"
+      },
+      "KPK" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/kp-logo.jpg?alt=media&token=6aefec1c-ca68-49e5-968f-e69128ea08e5",
+        "Name" : "KPK",
+        "Url" : "http://www.kpexcise.gov.pk/mvrecords/"
+      },
+      "Punjab" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/Punjab.PNG?alt=media&token=bfb1454e-ade8-47c2-a4ca-ff1a2290554f",
+        "Name" : "Punjab",
+        "Url" : "http://www.mtmis.excise-punjab.gov.pk/"
+      },
+      "Sindh" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/made-in-pakistan.appspot.com/o/Sindh.PNG?alt=media&token=f0c26a3b-d301-4c24-baeb-4b038292c320",
+        "Name" : "Sindh",
+        "Url" : "http://www.excise.gos.pk/vehiclefind/"
+      }
+    },
+    "Women" : {
+      "0KHAADI" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Khaadi_logo.png?alt=media&token=798eeed4-bd2d-446f-8d49-956ce4ef2ea5",
+        "Name" : "KHAADI",
+        "Url" : "https://www.khaadionline.com"
+      },
+      "1JUNAIDJAMSHED" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Junaidjamshed.gif?alt=media&token=dfeeffae-d4b9-449d-ba45-4e77e2f6ceea",
+        "Name" : "JUNAID JAMSHED",
+        "Url" : "http://www.junaidjamshed.com/"
+      },
+      "2GULAHMED" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Gulahmed.jpg?alt=media&token=ccd9c715-c658-4773-852b-ed8b50455819",
+        "Name" : "GULAHMED",
+        "Url" : "https://www.gulahmedshop.com/"
+      },
+      "3ALKARAM" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Alkaram.jpg?alt=media&token=9b7ef98e-6d81-472c-b145-c473a2053e62",
+        "Name" : "ALKARAM",
+        "Url" : "http://www.alkaramstudio.com/"
+      },
+      "4MARIAB" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Mariab.jpg?alt=media&token=fcdf5918-93b1-4cc4-b531-e54752ec0361",
+        "Name" : "MARIA B",
+        "Url" : "http://www.mariab.pk/"
+      },
+      "4SANASAFINAZ" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Sana-Safinaz.png?alt=media&token=60831f04-11b4-442a-b491-b7acece76440",
+        "Name" : "SANASAFINAZ",
+        "Url" : "http://www.sanasafinaz.com/"
+      },
+      "5EGO" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/ego.png?alt=media&token=c0b3512e-f76f-4566-a545-5f3cf8a45e5a",
+        "Name" : "EGO",
+        "Url" : "http://www.wearego.com"
+      },
+      "6SAPPHIRE" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/Sapphire.jpg?alt=media&token=e87345fd-0339-42c0-9342-933d8af2a089",
+        "Name" : "SAPPHIRE",
+        "Url" : "https://sapphireonline.pk/"
+      },
+      "7SHEOPS" : {
+        "Imgid" : "https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/sheops.png?alt=media&token=85eb9e63-c4d9-48c8-a85f-cc8eb02aba0b",
+        "Name" : "SHEOPS",
+        "Url" : "http://www.sheops.com/"
+      }
+    },
+	"Videos" : {
+      "0Video" : {
+        "Src" : "P3mAtvs5Elc",
+        "Title" : "Video # 1"
+        },
+      "1Video" : {
+        "Src" : "nCgQDjiotG0",
+        "Title" : "Video # 2"
+        
+      },
+      "2Video" : {
+        "Src" : "P3mAtvs5Elc",
+        "Title" : "Video # 3"
+        
+      }
+      
+    }
+  }
+}

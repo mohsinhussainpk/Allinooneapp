@@ -2,12 +2,19 @@ package com.e.mohsinhussain.allinoneapp;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import org.json.JSONObject;
+
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
 
 public class SplashActivity extends Activity {
 
@@ -48,9 +55,6 @@ public class SplashActivity extends Activity {
 //
 //                }
 //            }, timer);
-
-
-
 
 
         }

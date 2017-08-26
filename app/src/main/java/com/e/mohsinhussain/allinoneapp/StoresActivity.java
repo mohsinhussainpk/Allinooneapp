@@ -60,7 +60,7 @@ public class StoresActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stores);
-  MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(this, "ca-app-pub-7071387714574454~2252212923");
         AdView mAdView = (AdView) findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder() .build();
 
@@ -127,7 +127,7 @@ public class StoresActivity extends AppCompatActivity {
 
 
 
-        Log.i("DAL::category", category);
+//        Log.i("DAL::category", category);
 if(category.equalsIgnoreCase("Live TV"))
 {
 

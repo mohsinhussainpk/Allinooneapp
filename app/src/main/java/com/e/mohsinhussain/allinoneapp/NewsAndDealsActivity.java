@@ -137,7 +137,7 @@ public class NewsAndDealsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-                layer.searchProfile(list.get(i));
+                layer.searchNews(list.get(i));
 
 
             }

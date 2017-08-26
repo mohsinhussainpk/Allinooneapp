@@ -10,6 +10,7 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -25,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.database.DatabaseReference;
@@ -32,9 +34,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.android.gms.ads.MobileAds;
+
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import io.branch.indexing.BranchUniversalObject;
+import io.branch.referral.Branch;
+import io.branch.referral.BranchError;
+import io.branch.referral.util.LinkProperties;
 
 public class MainActivity extends BottomNavigtionViewActivity
         implements NavigationView.OnNavigationItemSelectedListener ,  BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
@@ -97,11 +107,20 @@ public class MainActivity extends BottomNavigtionViewActivity
     public static StorageReference mStorageRef;
 
     String[] web = {
-
+"Refer and Earn",
             "News",
+            "Videos",
+            "Live TV",
+            "Games",
+
             "Deals",
             "Shopping",
+            "Government Services",
+            "Travel",
+
             "Food",
+            "Delivery Services",
+
             "Taxi",
             "Classifieds",
             "Jobs",
@@ -112,22 +131,19 @@ public class MainActivity extends BottomNavigtionViewActivity
             "Real State",
             "Price Comparison",
             "Education",
-            "Travel",
-            "Home Service",
+
             "Health",
-            "Finance",
+
             "Furniture",
             "Printing",
             "Gifts and Flowers",
             "Baby and Kids",
             "Women",
-            "Delivery Services",
             "Entertainment",
             "Music",
             "Social",
-            "Live TV",
-            "Government Services",
-            "Games",
+
+
 
 
 
@@ -137,11 +153,18 @@ public class MainActivity extends BottomNavigtionViewActivity
 
     } ;
     int[] imageId = {
-
+            R.drawable.money,
             R.drawable.newspaper,
+            R.drawable.youtube,
+            R.drawable.live,
+            R.drawable.gamepad,
             R.drawable.deals,
             R.drawable.shoppingcart,
+            R.drawable.building,
+            R.drawable.distancetotravelbetweentwopoints,
+
             R.drawable.food,
+            R.drawable.truck,
             R.drawable.taxi,
             R.drawable.classifieds,
             R.drawable.onlinejobsearchsymbol,
@@ -152,23 +175,18 @@ public class MainActivity extends BottomNavigtionViewActivity
             R.drawable.realestate,
             R.drawable.comparison,
             R.drawable.education,
-            R.drawable.distancetotravelbetweentwopoints,
-            R.drawable.homeservices,
             R.drawable.medicines,
-            R.drawable.finance,
             R.drawable.armchair,
             R.drawable.printbutton,
             R.drawable.gift,
 
             R.drawable.babydummywithbearheadsilhouette,
             R.drawable.dress,
-            R.drawable.truck,
-            R.drawable.ebuzz,
+            R.drawable.mask,
             R.drawable.music,
-            R.drawable.ebuzz,
-            R.drawable.ebuzz,
-            R.drawable.homeservices,
-            R.drawable.ebuzz,
+            R.drawable.users,
+
+
 
 
 
@@ -177,7 +195,7 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
     };
-
+    Branch branch;
     int currentImage =-1;
     public static DAL layer;
     ImageButton GridImageButton;
@@ -198,7 +216,8 @@ public class MainActivity extends BottomNavigtionViewActivity
       setContentView(R.layout.activity_main);
         //requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(this, "ca-app-pub-7071387714574454~2252212923");
+
         CustomGrid adapter = new CustomGrid(this, web, imageId);
         ExpandableHeightGridView grid=(ExpandableHeightGridView) findViewById(R.id.customgrid);
         grid.setAdapter(adapter);
@@ -289,7 +308,7 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-7071387714574454/1821118602");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 //        ImageButton imageButton= (ImageButton) findViewById(R.id.shoppingImage);
@@ -312,7 +331,9 @@ public class MainActivity extends BottomNavigtionViewActivity
 
 
 
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -334,21 +355,21 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        int id = item.getItemId();
+//
+//        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//    }
+//
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -433,6 +454,21 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
 
 
         }
+        else if (id == R.id.nav_referandearn) {
+
+            startActivity(new Intent(MainActivity.this,ReferAndEarn.class));
+
+
+
+
+
+//        } else if (id == R.id.nav_slideshow) {
+//
+//            Intent intent=new Intent(getApplicationContext(),TermsAndConditionActivity.class);
+//            startActivity(intent);
+
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
@@ -472,6 +508,16 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
 
             else if(web[position] == "Deals"){
                 Intent intent = new Intent(this,DealsAndCouponsActivty.class);
+                startActivity(intent);
+
+            }
+
+            else if(web[position] == "Videos"){
+                layer=new DAL(this,this);
+                layer.searchVideos();
+            }
+            else if(web[position] == "Refer and Earn"){
+                Intent intent = new Intent(this,ReferAndEarn.class);
                 startActivity(intent);
 
             }
@@ -664,4 +710,12 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
     public void onPageScrollStateChanged(int state) {
 
     }
+
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        this.setIntent(intent);
+    }
+
+
 }

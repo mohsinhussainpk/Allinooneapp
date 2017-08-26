@@ -20,8 +20,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
-
+import java.util.Collections.*;
 /**
  * Created by Hp on 5/13/2017.
  */
@@ -48,6 +49,11 @@ public class DAL  {
     public static ArrayList<String> getBrandName;
     public static ArrayList<String> getBrandUrl;
     public static ArrayList<String> getImageUrl;
+    public static ArrayList<String> getNewsSrc;
+    public static ArrayList<String> getVideSrc;
+    public static ArrayList<String> getVideTitlte;
+
+
     public static ArrayList<Bitmap> bitmaps;
     public static ArrayList<String> sliderImage;
     public static ArrayList<String> sliderUrl;
@@ -378,6 +384,207 @@ public class DAL  {
 
 
     }
+
+    public static void searchNews(final String category) {
+//
+
+        final ProgressDialog Dialog;
+        Log.i("DAL::context", String.valueOf(context));
+        Dialog = new ProgressDialog(context);
+        Dialog.setMessage("Loading...");
+        Dialog.show();
+
+
+        getBrandName=new ArrayList<String>();
+        getBrandUrl=new ArrayList<String>();
+        getImageUrl=new ArrayList<String>();
+        getNewsSrc=new ArrayList<String>();
+
+
+        table = database.child(category);
+
+
+
+
+        table.keepSynced(true);
+
+
+
+
+        table.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot record : dataSnapshot.getChildren()) {
+
+
+                   // Log.i("DAL::deleteProfile", record.child("Name").getValue(String.class) + " "  );
+                    //      Log.i("DAL::deleteProfile", counter + " "  );
+
+                    //Log.i("DAL::deleteProfile", record.child("Roll").getValue(String.class) + " "  );
+                    getBrandName.add( String.valueOf(record.child("Name").getValue(String.class)));
+                    getBrandUrl.add( String.valueOf(record.child("Url").getValue(String.class)));
+                    getImageUrl.add( String.valueOf(record.child("Imgid").getValue(String.class)));
+                    getNewsSrc.add( String.valueOf(record.child("Src").getValue(String.class)));
+                    Log.i("DAL::deleteProfile", String.valueOf(record.child("Src").getValue(String.class)) + " "  );
+//getImageUrl.add("https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/0.jpg?alt=media&token=058741a8-140b-4eab-9443-edd35c2f2f0c");
+//                    getImageUrl.add(String.valueOf(record.child("Imgid").getValue(String.class)));
+//                   URL url = new URL(getImageUrl.get);
+//                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
+
+
+
+
+                    //getBrandCategory[counter]= String.valueOf( record.child("Category").getValue(String.class));
+                    //Toast.makeText(context,getBrandName.get(counter),Toast.LENGTH_SHORT).show();
+                    // Log.i("DAL::deleteProfile", getitemname[counter] + " "  );
+                    //Log.i("DAL::deleteProfile", getcgpa[counter] + " "  );
+//                    counter++;
+
+
+                }
+                Collections.reverse(getNewsSrc);
+                Collections.reverse(getBrandName);
+                Collections.reverse(getBrandUrl);
+                Collections.reverse(getImageUrl);
+                //            Dialog.dismiss();
+                Intent intent=new Intent(context,NewsListViewActivity.class);//opening the  stores activity as soon as the
+                //progress bar finishes.
+                intent.putExtra("category",category);
+                ((Activity)context).overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                context.startActivity(intent);
+                Dialog.dismiss();
+
+
+
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+//        for(int k=0 ; k<getBrandName.size() ;k++)
+//        {
+//
+//            URL url = null;
+//            try {
+//
+//                url = new URL(getImageUrl.get(k));
+//                Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                bitmaps.add(bmp);
+//
+//
+//            } catch (MalformedURLException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//        }
+
+
+    }
+    public static void searchVideos() {
+//
+
+        final ProgressDialog Dialog;
+        Log.i("DAL::context", String.valueOf(context));
+        Dialog = new ProgressDialog(context);
+        Dialog.setMessage("Loading...");
+        Dialog.show();
+
+
+        getVideSrc=new ArrayList<String>();
+        getVideTitlte=new ArrayList<String>();
+
+
+        table = database.child("Videos");
+
+
+
+
+        table.keepSynced(true);
+
+
+
+
+        table.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot record : dataSnapshot.getChildren()) {
+
+
+                    // Log.i("DAL::deleteProfile", record.child("Name").getValue(String.class) + " "  );
+                    //      Log.i("DAL::deleteProfile", counter + " "  );
+
+                    //Log.i("DAL::deleteProfile", record.child("Roll").getValue(String.class) + " "  );
+                    getVideTitlte.add( String.valueOf(record.child("Title").getValue(String.class)));
+                    getVideSrc.add( String.valueOf(record.child("Src").getValue(String.class)));
+
+                    Log.i("DAL::deleteProfile", String.valueOf(record.child("Src").getValue(String.class)) + " "  );
+//getImageUrl.add("https://firebasestorage.googleapis.com/v0/b/all-in-one-app-panoplytek.appspot.com/o/0.jpg?alt=media&token=058741a8-140b-4eab-9443-edd35c2f2f0c");
+//                    getImageUrl.add(String.valueOf(record.child("Imgid").getValue(String.class)));
+//                   URL url = new URL(getImageUrl.get);
+//                    Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                    imageView.setImageBitmap(bmp);
+
+
+
+
+                    //getBrandCategory[counter]= String.valueOf( record.child("Category").getValue(String.class));
+                    //Toast.makeText(context,getBrandName.get(counter),Toast.LENGTH_SHORT).show();
+                    // Log.i("DAL::deleteProfile", getitemname[counter] + " "  );
+                    //Log.i("DAL::deleteProfile", getcgpa[counter] + " "  );
+//                    counter++;
+
+
+                }
+                Collections.reverse(getVideSrc);
+                Collections.reverse(getVideTitlte);
+
+                //            Dialog.dismiss();
+                Intent intent=new Intent(context,VideoActivity.class);//opening the  stores activity as soon as the
+                //progress bar finishes.
+                intent.putExtra("category",category);
+                ((Activity)context).overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+                context.startActivity(intent);
+                Dialog.dismiss();
+
+
+
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+//        for(int k=0 ; k<getBrandName.size() ;k++)
+//        {
+//
+//            URL url = null;
+//            try {
+//
+//                url = new URL(getImageUrl.get(k));
+//                Bitmap bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+//                bitmaps.add(bmp);
+//
+//
+//            } catch (MalformedURLException e) {
+//                e.printStackTrace();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//
+//        }
+
+
+    }
+
+
+
+
 
     public static void sliderDetail() {
          final ProgressDialog Dialog;

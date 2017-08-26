@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import io.branch.referral.Branch;
+
 /**
  * Created by Hp on 8/3/2017.
  */
@@ -47,6 +49,7 @@ public class CustomDialogClass extends Dialog implements
         switch (view.getId()) {
             case R.id.btn_yes:
                 SplashActivity.timer=0; // to open main activty direct when open again (not closed)
+               ReferAndEarn.branch.getInstance().logout();
                 c.finish();
                 break;
             case R.id.btn_no:
