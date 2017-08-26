@@ -49,7 +49,7 @@ public class CustomDialogClass extends Dialog implements
         switch (view.getId()) {
             case R.id.btn_yes:
                 SplashActivity.timer=0; // to open main activty direct when open again (not closed)
-               ReferAndEarn.branch.getInstance().logout();
+
                 c.finish();
                 break;
             case R.id.btn_no:
@@ -58,7 +58,7 @@ public class CustomDialogClass extends Dialog implements
             case R.id.btn_rate:
                 //final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
 
-                c.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=Orion.Soft")));
+                c.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.e.mohsinhussain.allinoneapp")));
 
                 break;
             default:

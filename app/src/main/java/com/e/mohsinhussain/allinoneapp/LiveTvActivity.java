@@ -83,5 +83,35 @@ public class LiveTvActivity extends YouTubeBaseActivity implements YouTubePlayer
         public void onVideoStarted() {
         }
     };
+    @Override
+    public void onBackPressed() {
+
+
+//        super.onBackPressed();
+//        Intent intent= new Intent(this,MainActivity.class);
+//        startActivity(intent);
+
+
+        super.onBackPressed();
+
+        try {
+            if (MainActivity.mInterstitialAd.isLoaded()) {
+                MainActivity.mInterstitialAd.show();
+            }
+            //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
+
+            finish();
+            overridePendingTransition(R.anim.slide_enter,R.anim.slide_exit);
+
+        }
+        catch (Throwable e)
+        {
+            e.printStackTrace();
+
+        }
+
+    }
+
+
 }
 

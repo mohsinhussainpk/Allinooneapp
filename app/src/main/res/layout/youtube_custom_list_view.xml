@@ -43,7 +43,7 @@
                 android:textStyle="bold"
                 android:background="#000000"
                 android:textColor="@color/white"
-                android:text="Vidoes title here"
+
                android:gravity="start"
 
                 android:layout_alignParentBottom="true"

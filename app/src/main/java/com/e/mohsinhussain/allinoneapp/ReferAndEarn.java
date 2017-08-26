@@ -232,7 +232,7 @@ public class ReferAndEarn extends AppCompatActivity   {
 
 
 //        myDialog.setView(dialogView);
-        myDialog.setCancelable(true);
+
         myDialog.show();
         seekBar1.setMax(branch.getCredits());
         seekBar1.post(new Runnable() {
@@ -306,6 +306,35 @@ public class ReferAndEarn extends AppCompatActivity   {
 
     }
 
+    @Override
+    public void onBackPressed() {
+
+
+//        super.onBackPressed();
+//        Intent intent= new Intent(this,MainActivity.class);
+//        startActivity(intent);
+
+
+        super.onBackPressed();
+        branch.getInstance().logout();
+
+        try {
+            if (MainActivity.mInterstitialAd.isLoaded()) {
+                MainActivity.mInterstitialAd.show();
+            }
+            //Toast.makeText(this,"onBackPressed",Toast.LENGTH_SHORT).show();
+
+            finish();
+            overridePendingTransition(R.anim.slide_enter,R.anim.slide_exit);
+
+        }
+        catch (Throwable e)
+        {
+            e.printStackTrace();
+
+        }
+
+    }
 
 
 }

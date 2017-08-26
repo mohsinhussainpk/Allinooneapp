@@ -414,7 +414,7 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
         } else if (id == R.id.nav_gallery) {
             final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
 
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=Orion.Soft")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.e.mohsinhussain.allinoneapp")));
 
 
 
@@ -430,30 +430,30 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
 ////            Intent intent=new Intent(getApplicationContext(),PrivacyActivity.class);
 //            startActivity(intent);
 
-
-         else if (id == R.id.nav_share) {
-//            Intent myIntent=new Intent(Intent.ACTION_SEND);
-//            myIntent.setType("Text/Plan");
-//            String shareBody="Your body here";
-//            String shareSubject="Your Subject here";
-//            myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
-//            myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
-//            startActivity(Intent.createChooser(myIntent,"Share"));
-
-            try {
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("text/plain");
-                i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
-                String sAux = "\nLet me recommend you this application\n\n";
-                sAux = sAux + "https://play.google.com/store/apps/details?id=Orion.Soft \n\n";
-                i.putExtra(Intent.EXTRA_TEXT, sAux);
-                startActivity(Intent.createChooser(i, "choose one"));
-            } catch(Exception e) {
-                //e.toString();
-            }
-
-
-        }
+//
+//         else if (id == R.id.nav_share) {
+////            Intent myIntent=new Intent(Intent.ACTION_SEND);
+////            myIntent.setType("Text/Plan");
+////            String shareBody="Your body here";
+////            String shareSubject="Your Subject here";
+////            myIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+////            myIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
+////            startActivity(Intent.createChooser(myIntent,"Share"));
+//
+//            try {
+//                Intent i = new Intent(Intent.ACTION_SEND);
+//                i.setType("text/plain");
+//                i.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+//                String sAux = "\nLet me recommend you this application\n\n";
+//                sAux = sAux + "https://play.google.com/store/apps/details?id=Orion.Soft \n\n";
+//                i.putExtra(Intent.EXTRA_TEXT, sAux);
+//                startActivity(Intent.createChooser(i, "choose one"));
+//            } catch(Exception e) {
+//                //e.toString();
+//            }
+//
+//
+//        }
         else if (id == R.id.nav_referandearn) {
 
             startActivity(new Intent(MainActivity.this,ReferAndEarn.class));
@@ -476,6 +476,14 @@ CustomDialogClass customDialogClass=new CustomDialogClass(this);
     }
 
 
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-7071387714574454/1821118602");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+
+    }
 
     public void itemClicked(int position) {
 
