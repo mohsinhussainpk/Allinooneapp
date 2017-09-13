@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/side_nav_bar"
 
-    tools:context="com.e.mohsinhussain.allinoneapp.SplashActivity">
+    tools:context="com.e.panoplytek.yotap.SplashActivity">
 
 
 
@@ -14,7 +14,7 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/applogoupdated"
+        android:src="@drawable/yotaplogo"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
 
@@ -27,14 +27,11 @@
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Loading..."
-    android:textSize="20dp"
-
+    android:text="Pakistan's first All in one app"
+    android:textSize="16dp"
+    android:layout_centerHorizontal="true"
     android:textColor="#ffffff"
     android:layout_marginTop="34dp"
-    android:layout_marginRight="137dp"
-    android:layout_marginEnd="137dp"
     android:layout_below="@+id/logo"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true" />
+ />
 </RelativeLayout>

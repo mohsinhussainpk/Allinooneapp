@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.e.mohsinhussain.allinoneapp.Webview">
+    tools:context="com.e.panoplytek.yotap.Webview">
 
     <WebView
         android:layout_width="match_parent"

@@ -4,32 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.e.mohsinhussain.allinoneapp.ReferAndEarn">
+    tools:context="com.e.panoplytek.yotap.ReferAndEarn">
+
+
+
+    <TextView
+        android:id="@+id/rs1text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:text=" : "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#2B2E4A"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="160dp"
+        />
 
     <TextView
         android:id="@+id/rstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:layout_marginTop="60dp"
-        android:text="Rs : "
+        android:layout_alignBaseline="@+id/rs1text"
+        android:layout_alignBottom="@+id/rs1text"
+        android:layout_toLeftOf="@+id/amountText"
+        android:layout_toStartOf="@+id/amountText"
+        android:paddingRight="10dp"
+        android:text="Rs "
+        android:textColor="#2B2E4A"
         android:textSize="18sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/referdescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/rstext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:text="refer your friends and earn 1 rupee for every user you refer"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/amountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="30sp"
+        android:layout_alignBaseline="@+id/rs1text"
+        android:layout_alignBottom="@+id/rs1text"
 
-        android:layout_alignBaseline="@+id/rstext"
-        android:layout_alignBottom="@+id/rstext"
-        android:layout_toRightOf="@+id/rstext"
-        android:layout_toEndOf="@+id/rstext" />
+        android:layout_toEndOf="@+id/rs1text"
+        android:layout_toRightOf="@+id/rs1text"
+        android:text="0"
+        android:textColor="#2B2E4A"
+        android:textSize="30sp" />
 
 <RelativeLayout
     android:layout_width="wrap_content"
@@ -37,31 +72,36 @@
     android:id="@+id/referallayout"
     android:layout_below="@+id/amountText"
     >
+
     <TextView
 
+        android:id="@+id/referallinktext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Referal link"
-
 
         android:layout_alignParentLeft="true"
+
         android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:id="@+id/referallinktext"
+        android:hint="Referal link"
+        android:textColor="@color/cardview_dark_background"
+        android:textColorHint="@color/cardview_dark_background"
+        android:textStyle="bold" />
 
-
-        />
     <Button
 
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="copy"
         android:id="@+id/referalcopybtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="313dp"
-        android:layout_marginStart="313dp">
+        android:layout_marginLeft="290dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorPrimary"
+        android:text="copy">
 
 
     </Button>
@@ -83,32 +123,44 @@
         android:orientation="horizontal"
         android:paddingTop="10dp"
         android:id="@+id/shareapplayout"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="40dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@id/referallayout"
         android:layout_alignParentStart="true">
 
         <Button
             android:id="@+id/refsharebutton"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Share"
-
-
-
-
-            />
+            android:layout_below="@+id/referdescription"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorPrimary"
+            android:text="Share" />
 
 
     </LinearLayout>
+
     <Button
+        android:id="@+id/ratebutton"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="Reedem Reward"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/shareapplayout"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Rate" />
+    <Button
         android:id="@+id/getreedembutton"
-
-        android:layout_below="@+id/shareapplayout" />
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/ratebutton"
+        android:background="@color/colorPrimary"
+        android:text="Reedem Reward" />
 </RelativeLayout>

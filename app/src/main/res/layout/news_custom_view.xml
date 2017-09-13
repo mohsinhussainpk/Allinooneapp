@@ -36,7 +36,6 @@
 
         android:layout_alignBottom="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
-        android:layout_marginTop="50dp"
         android:layout_below="@+id/textView">
 
     </TextView>

@@ -13,7 +13,7 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         style="@style/ImageStyle2"
-        android:src="@drawable/applogoupdated"
+        android:src="@drawable/yotap_256"
         android:id="@+id/imageView"
 
         app:civ_border_width="3dp"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="50dp"
         android:layout_toRightOf="@+id/imageView"
-        android:text="All In One App"
+        android:text="YoTap"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 

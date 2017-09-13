@@ -124,6 +124,68 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503733291535:android:159947de3e449ab9",
+        "android_client_info": {
+          "package_name": "com.e.mohsinhussain.yotap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503733291535-3tq1tdmtliqlp8jcikc12u86vnadmv9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBujrm_K77KtWGyH7lMMnM1-GfHr6dg3y0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503733291535:android:ae430ff20ee1c238",
+        "android_client_info": {
+          "package_name": "com.e.panoplytek.yotap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "503733291535-3tq1tdmtliqlp8jcikc12u86vnadmv9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBujrm_K77KtWGyH7lMMnM1-GfHr6dg3y0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

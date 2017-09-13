@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.e.mohsinhussain.allinoneapp.BottomNavigtionViewActivity"
+    tools:context="com.e.panoplytek.yotap.BottomNavigtionViewActivity"
 
     android:id="@+id/bottomDesign"
     android:layout_height="match_parent"

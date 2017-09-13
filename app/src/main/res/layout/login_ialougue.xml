@@ -66,14 +66,17 @@
         <!--android:layout_alignParentLeft="true"-->
         <!--android:layout_alignParentStart="true" />-->
     <Button
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:text="get reedem"
         android:id="@+id/reddembutton"
-        android:layout_below="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="33dp" />
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginTop="33dp"
+        android:background="@color/colorPrimary"
+
+        android:text="get reedem"
+        android:textColor="@color/cardview_light_background" />
 
 
 

@@ -1,8 +1,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height=
-        "match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#fff"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -57,7 +56,7 @@
 
         </com.google.android.gms.ads.AdView>
 
-        <com.e.mohsinhussain.allinoneapp.ExpandableHeightGridView
+        <com.e.panoplytek.yotap.ExpandableHeightGridView
             android:id="@+id/customgrid"
             android:stretchMode="columnWidth"
             android:horizontalSpacing="0.5dp"
